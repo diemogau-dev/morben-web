@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Morben — Brand Kit v3</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #08080a; font-family: 'Inter', system-ui, sans-serif; padding: 24px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  @media print { body { background: #08080a !important; } }
+  .mb-wrap { max-width: 1100px; margin: 0 auto; }
+  .mb-section { background: #0E0E10; border-radius: 16px; padding: 2.25rem 2rem; margin-bottom: 14px; color: #F5F5F5; overflow: hidden; position: relative; }
+  .mb-section.light { background: #F5F5F5; color: #0E0E10; }
+  .mb-section.orange { background: #FF5722; color: #FFFFFF; }
+  .mb-eyebrow { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #FF5722; margin-bottom: 0.5rem; }
+  .mb-section.orange .mb-eyebrow { color: rgba(255,255,255,0.85); }
+  .mb-h { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 0.5rem; }
+  .mb-p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: rgba(245,245,245,0.65); margin: 0; }
+  .mb-section.light .mb-p { color: #424242; }
+  .mb-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 1.5rem 0; }
+  .mb-section.light .mb-divider { background: rgba(14,14,16,0.1); }
+  .mb-grid-pattern {
+    position: absolute; inset: 0; opacity: 0.5; pointer-events: none;
+    background-image:
+      linear-gradient(to right, rgba(255,87,34,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,87,34,0.06) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+  .mb-content { position: relative; }
+  .mb-swatch { aspect-ratio: 1.4 / 1; border-radius: 12px; padding: 14px 14px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .mb-swatch-hex { font-family: 'JetBrains Mono', 'Inter', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.04em; }
+  .mb-swatch-name { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; margin-top: 2px; opacity: 0.85; }
+  .mb-card { background: #1c1c1e; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; }
+
+  /* === LOCKUP: wordmark + isotipo como punto final ===
+     Reglas:
+     - El isótopo se trata como un signo de puntuación: tamaño ≈ 18% de la altura del wordmark (similar al diámetro de un punto en Poppins).
+     - Se ancla a la línea base del wordmark.
+     - Lleva un espacio horizontal proporcional al kerning normal de un punto: ~0.04em del wordmark. NUNCA se superpone.
+  */
+  /* Lockup: la baseline tipográfica de "morben" (Poppins Bold) está aproximadamente en
+     0.78em desde el top del em-box. Para que el BORDE INFERIOR del isótopo coincida
+     con esa baseline, posicionamos el span de forma absoluta dentro de un wrapper
+     relativo, anclado al bottom = (1 - 0.78)em = 0.22em desde abajo. */
+  /* Lockup. En Poppins Bold a font-size:1em, la línea base está aprox a 0.06em desde el
+     fondo del em-box (descender ratio ~0.06). El borde inferior del isótopo debe caer
+     exactamente ahí. Tamaño del isótopo = 0.16em (proporción real de un punto en Poppins). */
+  /* Lockup. Truco: el isótopo se inserta como pseudo-glyph inline. Usamos un span con
+     vertical-align numérico calibrado para que su BORDE INFERIOR quede en la baseline
+     tipográfica de Poppins (descender ratio ~0.21em por debajo del bottom visual de las letras sin descenders). */
+  .mb-lockup { display: inline; line-height: 1; white-space: nowrap; }
+  .mb-lockup .mb-word { font-family: 'Poppins', sans-serif; font-weight: 700; letter-spacing: -0.045em; }
+  .mb-lockup .mb-iso { display: inline-block; width: 0.16em; height: 0.16em; margin-left: -0.24em; vertical-align: baseline; position: relative; top: 0; }
+  .mb-lockup .mb-iso svg { display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div class="mb-wrap">
+
+<!-- ╭───────────────────────────────────╮ -->
+<!-- │   01 — HERO BRAND IDENTITY        │ -->
+<!-- ╰───────────────────────────────────╯ -->
+<div class="mb-section">
+  <div class="mb-grid-pattern"></div>
+  <div class="mb-content">
+    <div class="mb-eyebrow">Brand Identity · v3</div>
+
+    <!-- Wordmark hero. Tamaño base 120px → isótopo 22px (≈18%) -->
+    <div style="padding: 2.5rem 0 1.25rem;">
+      <div class="mb-lockup" style="font-size: clamp(64px, 14vw, 120px);">
+        <span class="mb-word" style="color: #F5F5F5;">morben</span>
+        <span class="mb-iso" aria-label="Morben isotype — punto final">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/>
+            <ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/>
+            <ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/>
+            <circle cx="50" cy="50" r="9" fill="#FF5722"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <p style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,245,245,0.5); margin: 0 0 1.5rem;">Sistemas IA y Automatizaciones</p>
+
+    <p class="mb-p" style="max-width: 540px;">El wordmark es el ancla. El isótopo es el punto final — la firma operativa que cierra cada vez que escribimos "morben". Tamaño = 18% del wordmark, alineado a la base, separado con un espacio mínimo. Nunca se superpone al texto.</p>
+
+    <div class="mb-divider"></div>
+
+    <div class="mb-eyebrow" style="margin-top: 0;">Esencia</div>
+    <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(245,245,245,0.85); margin: 0;">
+      Inteligente <span style="color: #FF5722; margin: 0 6px;">•</span>
+      Sistémica <span style="color: #FF5722; margin: 0 6px;">•</span>
+      Confiable <span style="color: #FF5722; margin: 0 6px;">•</span>
+      Eficiente <span style="color: #FF5722; margin: 0 6px;">•</span>
+      Humana
+    </p>
+  </div>
+</div>
+
+<!-- ╭───────────────────────────────────╮ -->
+<!-- │   02 — CONSTRUCCIÓN DEL LOGOTIPO  │ -->
+<!-- ╰───────────────────────────────────╯ -->
+<div class="mb-section">
+  <div class="mb-eyebrow">01 · Construcción del logotipo</div>
+  <h3 class="mb-h">El punto que es un sistema.</h3>
+  <p class="mb-p" style="max-width: 600px; margin-bottom: 1.5rem;">El isótopo reemplaza al punto final del wordmark. <strong style="color: #F5F5F5;">Tamaño = 18% de la altura del wordmark</strong> (≈ diámetro de un punto en Poppins Bold). Se ancla a la línea base. Espacio horizontal de separación: 0.04em del wordmark. Esta proporción es invariante.</p>
+
+  <!-- Construction grid: muestra wordmark + punto a escala correcta -->
+  <div style="background: #1c1c1e; border-radius: 12px; padding: 3rem 2rem 2.5rem; margin-bottom: 14px; position: relative; overflow: hidden;">
+    <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;" aria-label="Logo construction">
+      <!-- Cap height -->
+      <line x1="40" y1="60" x2="560" y2="60" stroke="rgba(255,87,34,0.18)" stroke-width="1" stroke-dasharray="3 4"/>
+      <!-- x-height -->
+      <line x1="40" y1="98" x2="560" y2="98" stroke="rgba(255,87,34,0.18)" stroke-width="1" stroke-dasharray="3 4"/>
+      <!-- Baseline -->
+      <line x1="40" y1="160" x2="560" y2="160" stroke="rgba(255,87,34,0.35)" stroke-width="1" stroke-dasharray="3 4"/>
+
+      <!-- Wordmark: 100px → punto = 18px -->
+      <text x="60" y="160" font-family="Poppins, sans-serif" font-weight="700" font-size="100" letter-spacing="-4.5" fill="#F5F5F5">morben</text>
+
+      <!-- Isótopo como punto final. Punto de 18×18 cuyo borde inferior se alinea EXACTO con la baseline (y=160). -->
+      <g transform="translate(390, 142)">
+        <!-- centro en (9,9), r=9 → bottom = y=151+9=160 = baseline ✓ -->
+        <circle cx="9" cy="9" r="9" fill="none" stroke="#FF5722" stroke-width="1.4"/>
+        <ellipse cx="9" cy="9" rx="9" ry="4" fill="none" stroke="#FF5722" stroke-width="1.4" transform="rotate(45 9 9)"/>
+        <ellipse cx="9" cy="9" rx="9" ry="4" fill="none" stroke="#FF5722" stroke-width="1.4" transform="rotate(-45 9 9)"/>
+        <circle cx="9" cy="9" r="2" fill="#FF5722"/>
+      </g>
+
+      <!-- Annotations -->
+      <text x="565" y="64" font-family="Inter, sans-serif" font-size="9" fill="rgba(255,87,34,0.7)">cap</text>
+      <text x="565" y="102" font-family="Inter, sans-serif" font-size="9" fill="rgba(255,87,34,0.7)">x-h</text>
+      <text x="565" y="164" font-family="Inter, sans-serif" font-size="9" fill="rgba(255,87,34,0.7)">base</text>
+
+      <!-- Measurement bracket on isotipo size -->
+      <line x1="390" y1="180" x2="408" y2="180" stroke="rgba(255,87,34,0.6)" stroke-width="1"/>
+      <line x1="390" y1="176" x2="390" y2="184" stroke="rgba(255,87,34,0.6)" stroke-width="1"/>
+      <line x1="408" y1="176" x2="408" y2="184" stroke="rgba(255,87,34,0.6)" stroke-width="1"/>
+      <text x="399" y="194" font-family="Inter, sans-serif" font-size="9" fill="#FF5722" text-anchor="middle">0.18 X</text>
+
+      <!-- Wordmark height bracket -->
+      <line x1="48" y1="60" x2="48" y2="160" stroke="rgba(255,87,34,0.4)" stroke-width="1"/>
+      <line x1="44" y1="60" x2="52" y2="60" stroke="rgba(255,87,34,0.4)" stroke-width="1"/>
+      <line x1="44" y1="160" x2="52" y2="160" stroke="rgba(255,87,34,0.4)" stroke-width="1"/>
+      <text x="38" y="115" font-family="Inter, sans-serif" font-size="9" fill="#FF5722" text-anchor="end">X</text>
+    </svg>
+  </div>
+
+  <!-- Variantes del lockup -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+
+    <!-- Solo isotipo -->
+    <div class="mb-card">
+      <p class="mb-eyebrow" style="margin-bottom: 0.75rem;">Isotipo solo</p>
+      <div style="aspect-ratio: 1; background: #0E0E10; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 60%; height: 60%;">
+          <circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/>
+          <ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/>
+          <ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5722"/>
+        </svg>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(245,245,245,0.55); margin: 0.75rem 0 0; line-height: 1.5;">Para favicon, app icon, redes sociales y marcas de agua.</p>
+    </div>
+
+    <!-- Lockup horizontal -->
+    <div class="mb-card">
+      <p class="mb-eyebrow" style="margin-bottom: 0.75rem;">Lockup horizontal</p>
+      <div style="aspect-ratio: 1; background: #0E0E10; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 16px;">
+        <div class="mb-lockup" style="font-size: 44px;">
+          <span class="mb-word" style="color: #F5F5F5;">morben</span>
+          <span class="mb-iso">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="9" fill="#FF5722"/></svg>
+          </span>
+        </div>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(245,245,245,0.55); margin: 0.75rem 0 0; line-height: 1.5;">Uso primario en web, presentaciones y firmas.</p>
+    </div>
+
+    <!-- Lockup con tagline -->
+    <div class="mb-card">
+      <p class="mb-eyebrow" style="margin-bottom: 0.75rem;">Lockup con tagline</p>
+      <div style="aspect-ratio: 1; background: #0E0E10; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; gap: 6px;">
+        <div class="mb-lockup" style="font-size: 38px;">
+          <span class="mb-word" style="color: #F5F5F5;">morben</span>
+          <span class="mb-iso">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="9" fill="#FF5722"/></svg>
+          </span>
+        </div>
+        <p style="font-family: 'Inter', sans-serif; font-weight: 500; font-size: 7px; letter-spacing: 0.22em; color: rgba(245,245,245,0.55); margin: 0; text-transform: uppercase;">Sistemas IA y automatizaciones</p>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(245,245,245,0.55); margin: 0.75rem 0 0; line-height: 1.5;">Para portadas, decks y comunicación oficial.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ╭───────────────────────────────────╮ -->
+<!-- │   03 — VARIACIONES DE USO         │ -->
+<!-- ╰───────────────────────────────────╯ -->
+<div class="mb-section">
+  <div class="mb-eyebrow">02 · Variaciones</div>
+  <h3 class="mb-h">Cómo se aplica en cada fondo.</h3>
+  <p class="mb-p" style="margin-bottom: 1.5rem;">Cuatro tratamientos oficiales. El wordmark siempre conserva su peso. El isótopo es el único elemento que cambia de color según el contraste necesario.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+
+    <!-- Negro + naranja (principal) -->
+    <div style="background: #0E0E10; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 2rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1.4/1;">
+      <div class="mb-lockup" style="font-size: 44px;">
+        <span class="mb-word" style="color: #F5F5F5;">morben</span>
+        <span class="mb-iso">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="9" fill="#FF5722"/></svg>
+        </span>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FF5722; margin: 1rem 0 0;">Principal</p>
+    </div>
+
+    <!-- Blanco + naranja -->
+    <div style="background: #F5F5F5; border-radius: 12px; padding: 2rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1.4/1;">
+      <div class="mb-lockup" style="font-size: 44px;">
+        <span class="mb-word" style="color: #0E0E10;">morben</span>
+        <span class="mb-iso">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="9" fill="#FF5722"/></svg>
+        </span>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FF5722; margin: 1rem 0 0;">Sobre claro</p>
+    </div>
+
+    <!-- Naranja + blanco -->
+    <div style="background: #FF5722; border-radius: 12px; padding: 2rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1.4/1;">
+      <div class="mb-lockup" style="font-size: 44px;">
+        <span class="mb-word" style="color: #FFFFFF;">morben</span>
+        <span class="mb-iso">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#FFFFFF" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FFFFFF" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FFFFFF" stroke-width="6" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="9" fill="#FFFFFF"/></svg>
+        </span>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin: 1rem 0 0;">Acento</p>
+    </div>
+
+    <!-- Monocromo blanco -->
+    <div style="background: #0E0E10; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 2rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1.4/1;">
+      <div class="mb-lockup" style="font-size: 44px;">
+        <span class="mb-word" style="color: #F5F5F5;">morben</span>
+        <span class="mb-iso">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#F5F5F5" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#F5F5F5" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#F5F5F5" stroke-width="6" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="9" fill="#F5F5F5"/></svg>
+        </span>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,245,245,0.55); margin: 1rem 0 0;">Monocromo</p>
+    </div>
+  </div>
+</div>
+
+<!-- ╭───────────────────────────────────╮ -->
+<!-- │   04 — ESPACIO MÍNIMO Y TAMAÑOS   │ -->
+<!-- ╰───────────────────────────────────╯ -->
+<div class="mb-section">
+  <div class="mb-eyebrow">03 · Espaciado y tamaños mínimos</div>
+  <h3 class="mb-h">Aire alrededor del logo.</h3>
+  <p class="mb-p" style="margin-bottom: 1.5rem;">El espacio de protección equivale a la altura del wordmark (X). Nada — texto, imagen, borde — invade esa zona.</p>
+
+  <div style="background: #1c1c1e; border-radius: 12px; padding: 2.5rem 2rem; display: flex; align-items: center; justify-content: center; min-height: 220px; position: relative;">
+    <div style="position: relative; padding: 56px;">
+      <!-- Clear zone box (visual guide) -->
+      <div style="position: absolute; inset: 0; border: 1px dashed rgba(255,87,34,0.35); border-radius: 4px;"></div>
+      <div class="mb-lockup" style="font-size: 56px;">
+        <span class="mb-word" style="color: #F5F5F5;">morben</span>
+        <span class="mb-iso">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="9" fill="#FF5722"/></svg>
+        </span>
+      </div>
+      <span style="position: absolute; top: -8px; left: -8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #FF5722;">↳ X</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 14px;">
+    <div class="mb-card" style="text-align: center; padding: 1rem;">
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #FF5722; margin: 0 0 0.25rem;">DIGITAL · MIN</p>
+      <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 18px; margin: 0; color: #F5F5F5;">120 px</p>
+      <p class="mb-p" style="font-size: 12px; margin-top: 0.25rem;">Ancho mínimo en pantalla</p>
+    </div>
+    <div class="mb-card" style="text-align: center; padding: 1rem;">
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #FF5722; margin: 0 0 0.25rem;">PRINT · MIN</p>
+      <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 18px; margin: 0; color: #F5F5F5;">25 mm</p>
+      <p class="mb-p" style="font-size: 12px; margin-top: 0.25rem;">Ancho mínimo impreso</p>
+    </div>
+    <div class="mb-card" style="text-align: center; padding: 1rem;">
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #FF5722; margin: 0 0 0.25rem;">FAVICON</p>
+      <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 18px; margin: 0; color: #F5F5F5;">16 px</p>
+      <p class="mb-p" style="font-size: 12px; margin-top: 0.25rem;">Solo isótopo, sin wordmark</p>
+    </div>
+  </div>
+</div>
+
+<!-- ╭───────────────────────────────────╮ -->
+<!-- │   05 — PALETA DE COLORES          │ -->
+<!-- ╰───────────────────────────────────╯ -->
+<div class="mb-section">
+  <div class="mb-eyebrow">04 · Paleta de colores</div>
+  <h3 class="mb-h">Naranja sobre carbón.</h3>
+  <p class="mb-p" style="margin-bottom: 1.5rem;">Una marca, dos protagonistas. El naranja es la voz; el negro es el escenario. Los grises son utilidad — nunca toman el centro de la composición.</p>
+
+  <p class="mb-eyebrow" style="margin-top: 0.5rem;">Primarios</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 1.25rem;">
+    <div class="mb-swatch" style="background: #FF5722; color: #FFFFFF;">
+      <div class="mb-swatch-hex">#FF5722</div>
+      <div class="mb-swatch-name">Morben Naranja</div>
+    </div>
+    <div class="mb-swatch" style="background: #0E0E10; color: #F5F5F5; border: 1px solid rgba(255,255,255,0.08);">
+      <div class="mb-swatch-hex">#0E0E10</div>
+      <div class="mb-swatch-name">Carbón</div>
+    </div>
+    <div class="mb-swatch" style="background: #F5F5F5; color: #0E0E10;">
+      <div class="mb-swatch-hex">#F5F5F5</div>
+      <div class="mb-swatch-name">Off-white</div>
+    </div>
+  </div>
+
+  <p class="mb-eyebrow">Secundarios — variantes naranja</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 1.25rem;">
+    <div class="mb-swatch" style="background: #FF7E55; color: #5A1A05;">
+      <div class="mb-swatch-hex">#FF7E55</div>
+      <div class="mb-swatch-name">Naranja claro · hover</div>
+    </div>
+    <div class="mb-swatch" style="background: #EE3900; color: #FFFFFF;">
+      <div class="mb-swatch-hex">#EE3900</div>
+      <div class="mb-swatch-name">Naranja intenso · acento</div>
+    </div>
+  </div>
+
+  <p class="mb-eyebrow">Neutrales — utilidad</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px;">
+    <div class="mb-swatch" style="background: #1C1C1E; color: #F5F5F5; border: 1px solid rgba(255,255,255,0.08); aspect-ratio: 1/1;">
+      <div class="mb-swatch-hex">#1C1C1E</div>
+      <div class="mb-swatch-name">Surface</div>
+    </div>
+    <div class="mb-swatch" style="background: #282828; color: #F5F5F5; aspect-ratio: 1/1;">
+      <div class="mb-swatch-hex">#282828</div>
+      <div class="mb-swatch-name">Card</div>
+    </div>
+    <div class="mb-swatch" style="background: #424242; color: #F5F5F5; aspect-ratio: 1/1;">
+      <div class="mb-swatch-hex">#424242</div>
+      <div class="mb-swatch-name">Texto sec.</div>
+    </div>
+    <div class="mb-swatch" style="background: #5B5B5B; color: #F5F5F5; aspect-ratio: 1/1;">
+      <div class="mb-swatch-hex">#5B5B5B</div>
+      <div class="mb-swatch-name">Hint</div>
+    </div>
+  </div>
+</div>
+
+<!-- ╭───────────────────────────────────╮ -->
+<!-- │   06 — TIPOGRAFÍAS                │ -->
+<!-- ╰───────────────────────────────────╯ -->
+<div class="mb-section light">
+  <div class="mb-eyebrow">05 · Sistema tipográfico</div>
+  <h3 class="mb-h" style="color: #0E0E10;">Poppins manda. Inter explica.</h3>
+  <p class="mb-p" style="margin-bottom: 1.5rem;">Dos familias, jerarquía estricta. Poppins SemiBold construye autoridad; Inter Regular sostiene la legibilidad. Nunca se cruzan.</p>
+
+  <div style="background: #FFFFFF; border-radius: 12px; padding: 1.75rem 1.5rem; margin-bottom: 12px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 8px;">
+      <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; color: #FF5722; letter-spacing: 0.1em; text-transform: uppercase;">Display</span>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5B5B5B;">Poppins SemiBold · 600</span>
+    </div>
+    <p style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 56px; letter-spacing: -0.025em; margin: 0; color: #0E0E10; line-height: 1.05;">Aa Bb Cc 0123</p>
+    <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 32px; margin: 0.75rem 0 0; color: #0E0E10; letter-spacing: -0.01em;">El sistema que hace funcionar tu empresa.</p>
+    <div style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(14,14,16,0.1); display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px;">
+      <div><p style="font-family: 'Inter', sans-serif; font-size: 11px; color: #5B5B5B; margin: 0;">H1 · 48-64px</p></div>
+      <div><p style="font-family: 'Inter', sans-serif; font-size: 11px; color: #5B5B5B; margin: 0;">H2 · 36-48px</p></div>
+      <div><p style="font-family: 'Inter', sans-serif; font-size: 11px; color: #5B5B5B; margin: 0;">H3 · 24-28px</p></div>
+    </div>
+  </div>
+
+  <div style="background: #FFFFFF; border-radius: 12px; padding: 1.75rem 1.5rem;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 8px;">
+      <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; color: #FF5722; letter-spacing: 0.1em; text-transform: uppercase;">Body</span>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5B5B5B;">Inter Regular · 400 / Medium · 500</span>
+    </div>
+    <p style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 32px; letter-spacing: -0.005em; margin: 0; color: #0E0E10; line-height: 1.2;">Aa Bb Cc 0123</p>
+    <p style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.7; margin: 1rem 0 0; color: #424242; max-width: 540px;">Construimos sistemas de IA y automatizaciones que reemplazan el trabajo manual repetitivo de tu equipo. Más ventas atendidas, menos errores, menos horas perdidas en planillas.</p>
+    <div style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(14,14,16,0.1); display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px;">
+      <div><p style="font-family: 'Inter', sans-serif; font-size: 11px; color: #5B5B5B; margin: 0;">Body · 16-18px</p></div>
+      <div><p style="font-family: 'Inter', sans-serif; font-size: 11px; color: #5B5B5B; margin: 0;">Caption · 14px</p></div>
+      <div><p style="font-family: 'Inter', sans-serif; font-size: 11px; color: #5B5B5B; margin: 0;">Micro · 11-12px</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ╭───────────────────────────────────╮ -->
+<!-- │   07 — APLICACIONES               │ -->
+<!-- ╰───────────────────────────────────╯ -->
+<div class="mb-section">
+  <div class="mb-eyebrow">06 · Aplicaciones</div>
+  <h3 class="mb-h">El sistema, en uso real.</h3>
+  <p class="mb-p" style="margin-bottom: 1.5rem;">Cómo se ve la marca en los puntos de contacto donde más vive: app icon, perfil de WhatsApp Business, firma de mail.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 14px;">
+
+    <div class="mb-card" style="padding: 1.25rem; text-align: center;">
+      <p class="mb-eyebrow" style="margin-bottom: 0.75rem;">App icon</p>
+      <div style="width: 88px; height: 88px; margin: 0 auto; background: #0E0E10; border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 60%; height: 60%;">
+          <circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/>
+          <ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/>
+          <ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5722"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="mb-card" style="padding: 1.25rem; text-align: center;">
+      <p class="mb-eyebrow" style="margin-bottom: 0.75rem;">Favicon</p>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 16px; padding-top: 8px;">
+        <div style="width: 64px; height: 64px; background: #0E0E10; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 60%; height: 60%;"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="7"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="7" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="7" transform="rotate(-45 50 50)"/></svg>
+        </div>
+        <div style="width: 32px; height: 32px; background: #0E0E10; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 65%; height: 65%;"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="10"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="10" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="10" transform="rotate(-45 50 50)"/></svg>
+        </div>
+        <div style="width: 16px; height: 16px; background: #0E0E10; border-radius: 3px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 75%; height: 75%;"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="14"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-card" style="padding: 1.25rem; text-align: center;">
+      <p class="mb-eyebrow" style="margin-bottom: 0.75rem;">Perfil WhatsApp</p>
+      <div style="width: 88px; height: 88px; margin: 0 auto; background: #0E0E10; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px rgba(255,87,34,0.2);">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 58%; height: 58%;">
+          <circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/>
+          <ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/>
+          <ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/>
+          <circle cx="50" cy="50" r="10" fill="#FF5722"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-card" style="padding: 1.5rem 1.5rem;">
+    <p class="mb-eyebrow" style="margin-bottom: 1rem;">Firma de mail</p>
+    <div style="background: #FFFFFF; border-radius: 8px; padding: 1.25rem 1.5rem; border-left: 3px solid #FF5722;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+        <div style="width: 48px; height: 48px; background: #0E0E10; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 60%; height: 60%;"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="7"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="7" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="7" transform="rotate(-45 50 50)"/></svg>
+        </div>
+        <div>
+          <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 15px; color: #0E0E10; margin: 0;">Diego Benítez</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: #5B5B5B; margin: 2px 0 0;">Co-founder · morben</p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(14,14,16,0.08); padding-top: 10px;">
+        <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: #424242; margin: 0; line-height: 1.6;">
+          <span style="color: #FF5722; font-weight: 500;">www.morben.ai</span><span style="color: #5B5B5B;"> · Sistemas IA y automatizaciones · Asunción, Paraguay</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╭───────────────────────────────────╮ -->
+<!-- │   08 — DON'TS                     │ -->
+<!-- ╰───────────────────────────────────╯ -->
+<div class="mb-section light">
+  <div class="mb-eyebrow">07 · Lo que nunca hacemos</div>
+  <h3 class="mb-h" style="color: #0E0E10;">Reglas que cuidan la marca.</h3>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 1.25rem;">
+
+    <!-- Don't 1: superposición (el bug del v2) -->
+    <div style="background: #FFFFFF; border-radius: 10px; padding: 1.25rem; border: 1px solid rgba(14,14,16,0.06); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; background: #EE3900; color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px;">✕</div>
+      <div style="background: #F5F5F5; border-radius: 6px; padding: 1rem; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; min-height: 60px; position: relative;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 28px; color: #0E0E10; letter-spacing: -1.2px;">morben</span>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 36px; height: 36px; position: absolute; left: 50%; top: 50%; transform: translate(-30%, -55%);"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/></svg>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: #424242; margin: 0; line-height: 1.5;"><strong>No superponer.</strong> El isótopo nunca cubre ni invade el wordmark. Va siempre a la derecha, separado.</p>
+    </div>
+
+    <!-- Don't 2: sobredimensionar el isótopo -->
+    <div style="background: #FFFFFF; border-radius: 10px; padding: 1.25rem; border: 1px solid rgba(14,14,16,0.06); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; background: #EE3900; color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px;">✕</div>
+      <div style="background: #F5F5F5; border-radius: 6px; padding: 1rem; margin-bottom: 0.75rem; display: flex; align-items: flex-end; justify-content: center; min-height: 60px; gap: 4px;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 28px; color: #0E0E10; letter-spacing: -1.2px; line-height: 1;">morben</span>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="6"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="6" transform="rotate(-45 50 50)"/></svg>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: #424242; margin: 0; line-height: 1.5;"><strong>No sobredimensionar.</strong> El isótopo es un punto: 18% del wordmark. Nunca más grande.</p>
+    </div>
+
+    <!-- Don't 3: fuera de paleta -->
+    <div style="background: #FFFFFF; border-radius: 10px; padding: 1.25rem; border: 1px solid rgba(14,14,16,0.06); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; background: #EE3900; color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px;">✕</div>
+      <div style="background: linear-gradient(45deg, #4A90E2, #50E3C2); border-radius: 6px; padding: 1rem; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; min-height: 60px;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 28px; color: #FFFFFF; letter-spacing: -1.2px;">morben.</span>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: #424242; margin: 0; line-height: 1.5;"><strong>No usar fuera de paleta.</strong> Solo naranja, negro o blanco.</p>
+    </div>
+
+    <!-- Don't 4: mayúsculas -->
+    <div style="background: #FFFFFF; border-radius: 10px; padding: 1.25rem; border: 1px solid rgba(14,14,16,0.06); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; background: #EE3900; color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px;">✕</div>
+      <div style="background: #F5F5F5; border-radius: 6px; padding: 1rem; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; min-height: 60px;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 28px; color: #0E0E10; letter-spacing: -1.2px;">MORBEN.</span>
+      </div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: #424242; margin: 0; line-height: 1.5;"><strong>Nunca en mayúsculas.</strong> El wordmark es siempre lowercase.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
