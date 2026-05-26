@@ -25,7 +25,7 @@ const pillars = [
   },
   {
     number: '03',
-    title: 'Procesamiento de datos y documentos',
+    title: 'Datos y Documentos',
     body: [
       'Pilas de PDFs. Carpetas crediticias. Pólizas. Facturas. PowerPoint. Expedientes. Tu equipo dedica horas a leer, copiar, validar y trasladar información de un lado a otro.',
       'Construimos sistemas que extraen, estructuran y analizan documentos automáticamente. Scoring asistido, detección de red flags, redacción de informes. Lo que tomaba horas pasa a minutos y los datos quedan estructurados para tomar decisiones.',
