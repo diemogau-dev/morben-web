@@ -15,8 +15,8 @@ const PALETTE: Record<LogoVariant, { word: string; iso: string }> = {
 
 /**
  * Lockup oficial: wordmark "morben" + isótopo como punto final.
- * El isótopo mide 0.16em y se ancla a la baseline (réplica del brand kit).
- * Nunca se superpone al wordmark.
+ * El isótopo mide 0.2em y se ancla a la baseline, separado del wordmark
+ * por un pequeño gap para que nunca se superponga a la "n".
  */
 export function Logo({ size = 28, variant = 'default', className }: LogoProps) {
   const { word, iso } = PALETTE[variant]
@@ -32,9 +32,9 @@ export function Logo({ size = 28, variant = 'default', className }: LogoProps) {
         aria-hidden="true"
         style={{
           display: 'inline-block',
-          width: '0.16em',
-          height: '0.16em',
-          marginLeft: '-0.24em',
+          width: '0.2em',
+          height: '0.2em',
+          marginLeft: '0.06em',
           verticalAlign: 'baseline',
         }}
       >
