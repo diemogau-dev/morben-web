@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default:
-      'Morben — Automatizamos operaciones sobre los sistemas que ya tenés',
-    template: '%s — Morben',
+      'Morben · Automatizamos operaciones sobre los sistemas que ya tenés',
+    template: '%s · Morben',
   },
   description: site.description,
   openGraph: {

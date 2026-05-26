@@ -8,7 +8,7 @@ const pillars = [
     title: 'Operación de la empresa',
     body: [
       'Tu equipo pierde horas todos los días buscando información que vive en archivos dispersos, planillas, correos viejos y la cabeza de alguien.',
-      'Construimos agentes y sistemas RAG que centralizan el conocimiento de tu empresa y lo entregan al equipo en segundos. La normativa, los procesos, los datos de clientes, la historia de cada operación — todo accesible desde donde tu equipo ya trabaja.',
+      'Construimos agentes y sistemas RAG que centralizan el conocimiento de tu empresa y lo entregan al equipo en segundos. La normativa, los procesos, los datos de clientes, la historia de cada operación, todo accesible desde donde tu equipo ya trabaja.',
     ],
     footnote:
       'Aplicable a oficiales de crédito, asesores comerciales, atención al cliente, contadores, equipo legal interno, agentes de seguros.',
@@ -17,31 +17,31 @@ const pillars = [
     number: '02',
     title: 'Gestión de clientes y ventas',
     body: [
-      'Estás contactando a toda tu base por igual. A los que no van a comprar y a los que sí. A los que van a pagar y a los que no. El costo lo pagás siempre — el resultado, no.',
-      'Construimos sistemas que priorizan, segmentan y actúan. Quién contactar primero, qué decirle, por qué canal, en qué momento. Cobranza inteligente, recuperación de clientes dormidos, follow-up que no se cae.',
+      'Estás contactando a toda tu base por igual. A los que no van a comprar y a los que sí. A los que van a pagar y a los que no. El costo lo pagás siempre, el resultado, no.',
+      'Construimos sistemas que priorizan, segmentan y actúan. A quién contactar primero, qué decirle, por qué canal, en qué momento. Cobranza inteligente, recuperación de clientes dormidos, follow-up que no se cae, cierres y ventas.',
     ],
     footnote:
-      'Aplicable a cooperativas, financieras, retail con cuenta corriente, importadoras, aseguradoras, empresas de servicio recurrente.',
+      'Aplicable a cooperativas, financieras, retail con cuenta corriente, importadoras, aseguradoras, ecommerce.',
   },
   {
     number: '03',
     title: 'Procesamiento de datos y documentos',
     body: [
-      'Pilas de PDFs. Carpetas crediticias. Pólizas. Facturas. Expedientes. Tu equipo dedica horas a leer, copiar, validar y trasladar información de un lado a otro.',
-      'Construimos sistemas que extraen, estructuran y analizan documentos automáticamente. Scoring asistido, detección de red flags, redacción de informes. Lo que tomaba horas pasa a minutos — y los datos quedan estructurados para tomar decisiones.',
+      'Pilas de PDFs. Carpetas crediticias. Pólizas. Facturas. PowerPoint. Expedientes. Tu equipo dedica horas a leer, copiar, validar y trasladar información de un lado a otro.',
+      'Construimos sistemas que extraen, estructuran y analizan documentos automáticamente. Scoring asistido, detección de red flags, redacción de informes. Lo que tomaba horas pasa a minutos y los datos quedan estructurados para tomar decisiones.',
     ],
     footnote:
-      'Aplicable a análisis de carpetas crediticias, evaluación de pólizas, due diligence jurídica, procesamiento de facturas, gestión de expedientes.',
+      'Aplicable a análisis de carpetas crediticias, evaluación de pólizas, due diligence jurídica, reportes, gestión de expedientes.',
   },
 ]
 
 export function WhatWeDo() {
   return (
-    <section className="bg-surface/40 py-24 md:py-32 lg:py-40">
+    <section className="py-24 md:py-32 lg:py-40">
       <Container>
         <SectionHeading
           eyebrow="Qué hacemos"
-          title="Tres frentes donde tu empresa pierde plata sin verla."
+          title="Tres frentes donde tu empresa pierde tiempo y plata sin notarlo."
           subtitle="No vendemos paquetes cerrados. Diagnosticamos primero, construimos después. Pero la mayoría de los problemas operativos caen en alguno de estos tres frentes."
         />
 

@@ -19,7 +19,7 @@ export function ClosingCTA() {
           <Reveal delay={0.05}>
             <p className="mt-6 max-w-2xl font-sans text-[18px] leading-[1.55] text-muted md:text-[20px]">
               Sentate a hablar con nosotros. Cuarenta y cinco minutos. Sin venderte
-              nada. Solo para entender si tu empresa está lista — y si nosotros
+              nada. Solo para entender si tu empresa está lista, y si nosotros
               somos los indicados.
             </p>
           </Reveal>

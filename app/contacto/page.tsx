@@ -17,7 +17,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contacto"
         title="Cuarenta y cinco minutos. Sin venderte nada."
-        subtitle="Agendá una reunión de diagnóstico para entender si tu empresa está lista — y si nosotros somos los indicados. Te vamos a hacer algunas preguntas previas para asegurarnos de que el tiempo de los dos esté bien invertido."
+        subtitle="Agendá una reunión de diagnóstico para entender si tu empresa está lista, y si nosotros somos los indicados. Te vamos a hacer algunas preguntas previas para asegurarnos de que el tiempo de los dos esté bien invertido."
       />
 
       <section className="py-16 md:py-24">

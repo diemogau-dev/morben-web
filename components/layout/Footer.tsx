@@ -36,7 +36,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:pr-8">
-            <Link href="/" aria-label="Morben — inicio" className="rounded-sm">
+            <Link href="/" aria-label="Morben, inicio" className="rounded-sm">
               <Logo size={30} />
             </Link>
             <p className="mt-6 max-w-xs font-sans text-[15px] leading-[1.6] text-muted">

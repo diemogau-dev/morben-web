@@ -6,7 +6,7 @@ interface IsotypeProps {
 }
 
 /**
- * Isótopo Morben — el "punto final" de la marca.
+ * Isótopo Morben, el "punto final" de la marca.
  * SVG fiel al brand kit: círculo + dos elipses rotadas ±45° + punto central.
  */
 export function Isotype({

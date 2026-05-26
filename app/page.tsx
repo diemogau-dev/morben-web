@@ -6,7 +6,7 @@ import { CasesPreview } from '@/components/sections/CasesPreview'
 import { HowWeWork } from '@/components/sections/HowWeWork'
 import { Integrations } from '@/components/sections/Integrations'
 import { IndustriesPreview } from '@/components/sections/IndustriesPreview'
-import { TeamPreview } from '@/components/sections/TeamPreview'
+import { Faq } from '@/components/sections/Faq'
 import { ClosingCTA } from '@/components/sections/ClosingCTA'
 
 export default function HomePage() {
@@ -20,7 +20,7 @@ export default function HomePage() {
       <HowWeWork />
       <Integrations />
       <IndustriesPreview />
-      <TeamPreview />
+      <Faq />
       <ClosingCTA />
     </>
   )

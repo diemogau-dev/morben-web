@@ -44,7 +44,7 @@ export function Header() {
       )}
     >
       <Container className="flex h-16 items-center justify-between md:h-20">
-        <Link href="/" aria-label="Morben — inicio" className="rounded-sm">
+        <Link href="/" aria-label="Morben, inicio" className="rounded-sm">
           <Logo size={26} />
         </Link>
 

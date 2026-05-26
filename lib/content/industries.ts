@@ -18,7 +18,7 @@ export const industries: Industry[] = [
     pain: 'Cooperativas, financieras, casas de crédito, casas de cambio. Mora alta, oficiales sin info en tiempo real, carpetas que tardan días en analizarse.',
     headline: 'Cooperativas, financieras y casas de crédito que ya operan distinto.',
     subtitle:
-      'Mora que no baja, oficiales que pierden horas buscando info, carpetas que se atrasan en comité. Son los tres dolores que más escuchamos en este rubro — y los tres se pueden resolver en semanas.',
+      'Mora que no baja, oficiales que pierden horas buscando info, carpetas que se atrasan en comité. Son los tres dolores que más escuchamos en este rubro, y los tres se pueden resolver en semanas.',
     statusQuo: {
       heading: 'El equipo trabaja con sistemas que no se hablan entre sí.',
       body: 'El core bancario tiene los movimientos. El CRM tiene los contactos. Excel tiene el seguimiento. WhatsApp tiene las conversaciones. La carpeta digital tiene los documentos. Para tomar una decisión cualquiera, el oficial reconstruye todo eso a mano, cada vez.',
@@ -48,7 +48,7 @@ export const industries: Industry[] = [
     },
     whatWeAutomate: {
       heading: 'Procesamiento documental y agentes que aceleran el ciclo.',
-      body: 'Las aseguradoras tienen toneladas de documentos no estructurados — pólizas, peritajes, expedientes — que pueden procesarse con IA. Y los flujos de aprobación tienen reglas claras que se pueden automatizar.',
+      body: 'Las aseguradoras tienen toneladas de documentos no estructurados, como pólizas, peritajes y expedientes, que pueden procesarse con IA. Y los flujos de aprobación tienen reglas claras que se pueden automatizar.',
       bullets: [
         'Procesamiento automático de pólizas y peritajes con extracción estructurada.',
         'Agentes IA para producción y atención al cliente que conocen las pólizas vigentes.',
@@ -71,7 +71,7 @@ export const industries: Industry[] = [
     },
     whatWeAutomate: {
       heading: 'Asistentes que centralizan el know-how del estudio.',
-      body: 'Los estudios tienen una base de conocimiento gigante — expedientes, contratos, jurisprudencia, normativa — que hoy no es accesible. La hacemos accesible.',
+      body: 'Los estudios tienen una base de conocimiento gigante de expedientes, contratos, jurisprudencia y normativa que hoy no es accesible. La hacemos accesible.',
       bullets: [
         'Asistente IA sobre la base completa de expedientes y conocimiento del estudio.',
         'Procesamiento automático de facturas, balances y documentos repetitivos.',
@@ -136,7 +136,7 @@ export const industries: Industry[] = [
       'Retail e importadoras tienen dos cuellos de botella crónicos: la atención al cliente saturada y la gestión de cuenta corriente que se hace a mano.',
     statusQuo: {
       heading: 'El equipo de atención al cliente atiende lo mismo todo el día.',
-      body: 'Estado de pedido, stock disponible, precio actualizado, condición de cuenta. Preguntas que se repiten cientos de veces por día, todas con respuestas que están en el sistema — solo que nadie las tiene a mano.',
+      body: 'Estado de pedido, stock disponible, precio actualizado, condición de cuenta. Preguntas que se repiten cientos de veces por día, todas con respuestas que están en el sistema, solo que nadie las tiene a mano.',
     },
     whatWeAutomate: {
       heading: 'Atención conversacional + reactivación de clientes dormidos.',

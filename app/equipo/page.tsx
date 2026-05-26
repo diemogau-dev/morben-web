@@ -41,7 +41,7 @@ export default function TeamPage() {
 
       <CtaBlock
         heading="¿Querés sentarte con nosotros?"
-        body="Cuarenta y cinco minutos. Sin venderte nada. Solo para entender si tu empresa está lista — y si nosotros somos los indicados."
+        body="Cuarenta y cinco minutos. Sin venderte nada. Solo para entender si tu empresa está lista, y si nosotros somos los indicados."
       />
     </>
   )

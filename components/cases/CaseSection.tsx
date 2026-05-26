@@ -40,11 +40,12 @@ export function CaseSection({ section }: { section: CaseSectionData }) {
             {section.bullets.map((b, i) => (
               <li
                 key={i}
-                className="flex gap-3 font-sans text-[17px] leading-[1.6] text-offwhite/90 md:text-[18px]"
+                className="flex items-start gap-4 font-sans text-[17px] leading-[1.6] text-offwhite/90 md:text-[18px]"
               >
-                <span aria-hidden="true" className="text-orange">
-                  —
-                </span>
+                <span
+                  aria-hidden="true"
+                  className="mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-orange"
+                />
                 <span>{b}</span>
               </li>
             ))}
