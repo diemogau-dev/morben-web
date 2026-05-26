@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Logo } from '@/components/brand/Logo'
+import { WhatsAppIcon } from '@/components/brand/WhatsAppIcon'
 import { Container } from '@/components/layout/Container'
 import { ButtonLink } from '@/components/ui/Button'
 import { navLinks, cta, site } from '@/lib/site'
@@ -66,8 +67,17 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <ButtonLink href={site.calendly} variant="outline" external>
+        <div className="hidden items-center gap-5 md:flex">
+          <a
+            href={`https://wa.me/${site.whatsapp}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Escribinos por WhatsApp"
+            className="text-muted transition-colors hover:text-orange"
+          >
+            <WhatsAppIcon className="h-5 w-5" />
+          </a>
+          <ButtonLink href={site.agendar} variant="outline">
             {cta.header}
             <span aria-hidden="true">→</span>
           </ButtonLink>
@@ -121,17 +131,25 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="container-px pb-12">
+        <div className="flex flex-col gap-4 container-px pb-12">
           <ButtonLink
-            href={site.calendly}
+            href={site.agendar}
             variant="primary"
             size="lg"
-            external
             className="w-full"
           >
             {cta.header}
             <span aria-hidden="true">→</span>
           </ButtonLink>
+          <a
+            href={`https://wa.me/${site.whatsapp}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 font-sans text-[16px] text-muted transition-colors hover:text-orange"
+          >
+            <WhatsAppIcon className="h-5 w-5" />
+            Hablar por WhatsApp
+          </a>
         </div>
       </div>
     </header>

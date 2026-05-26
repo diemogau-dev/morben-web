@@ -29,7 +29,7 @@ export function CtaBlock({ heading, body, secondary, bordered = true }: CtaBlock
           )}
           <Reveal delay={0.1}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-              <ButtonLink href={site.calendly} variant="primary" size="lg" external>
+              <ButtonLink href={site.agendar} variant="primary" size="lg">
                 {cta.primary}
                 <span aria-hidden="true">→</span>
               </ButtonLink>

@@ -39,7 +39,7 @@ export const cases: CaseStudy[] = [
     headline:
       'Cómo Incentiva redujo más de 1.265 horas mensuales de búsqueda manual en su proceso de selección.',
     subtitle:
-      'Un agente de IA que centraliza información dispersa y devuelve los mejores candidatos en segundos.',
+      'Un asistente interno conversacional que centraliza información dispersa y devuelve los mejores candidatos en segundos.',
     chips: ['Incentiva', 'Reclutamiento y selección', 'Implementación: pocas semanas'],
     sections: [
       {
@@ -69,9 +69,9 @@ export const cases: CaseStudy[] = [
       },
       {
         eyebrow: 'La solución',
-        heading: 'Un agente de IA integrado al proceso real de selección.',
+        heading: 'Un asistente interno conversacional integrado al proceso real de selección.',
         body: [
-          'Construimos un agente que centraliza CVs, notas y datos dispersos en un único sistema de búsqueda conversacional. El selector escribe en lenguaje natural y recibe candidatos relevantes en segundos, ya estructurados y con el contexto histórico cargado.',
+          'Construimos un asistente interno que centraliza CVs, notas y datos dispersos en un único sistema de búsqueda conversacional. El selector escribe en lenguaje natural y recibe candidatos relevantes en segundos, ya estructurados y con el contexto histórico cargado.',
         ],
         bullets: [
           'Una sola interfaz conversacional, sin formularios.',
@@ -102,7 +102,7 @@ export const cases: CaseStudy[] = [
     meta: {
       title: 'Caso Incentiva, 1.265 horas mensuales recuperadas',
       description:
-        'Un agente de IA que centralizó información dispersa y devolvió los mejores candidatos en segundos para una empresa paraguaya de reclutamiento.',
+        'Un asistente interno conversacional que centralizó información dispersa y devolvió los mejores candidatos en segundos para una empresa paraguaya de reclutamiento.',
     },
     preview: {
       category: 'RRHH · Reclutamiento y selección',

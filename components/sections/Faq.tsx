@@ -8,32 +8,36 @@ import { Eyebrow } from '@/components/ui/Eyebrow'
 
 const faqs = [
   {
-    q: '¿Mis datos están seguros? ¿A dónde van?',
-    a: 'Tus datos son tuyos y se quedan dentro de tu empresa. Trabajamos dentro de tus propios sistemas y entornos, con accesos controlados y todo auditable: queda registro de qué se consultó, cuándo y para qué. No usamos la información de tu empresa para entrenar modelos de terceros, y definimos juntos qué datos toca cada automatización y quién puede verlos.',
+    q: '¿Por qué confiar en ustedes si son nuevos como marca?',
+    a: 'Morben es nuevo. Los cuatro fundadores no. Llevamos más de una década construyendo software, marketplaces, agencias y plataformas para empresas paraguayas. Sabemos por dentro cómo se decide, cómo se compra y dónde se rompe la confianza. Lo que cambia con Morben es el foco: dejamos de hacer software a medida y nos dedicamos a construir operación nueva con IA.',
   },
   {
-    q: '¿Tienen que reemplazar los sistemas que ya usamos?',
-    a: 'No. Construimos sobre lo que ya tenés y ya funciona: tu ERP, tu CRM, tu WhatsApp, tus planillas, tu canal de cobros. Nos conectamos por API cuando existe y trabajamos sobre los datos cuando no. No migramos nada que no haga falta.',
+    q: '¿Cuánto cuesta empezar?',
+    a: 'Cada operación es distinta. La llamada de diagnóstico es gratuita y filtrada: solo trabajamos con empresas medianas y grandes en proyectos serios, no atendemos consultas puntuales. En esa primera conversación entendemos tu operación y, si tiene sentido para ambos, te proponemos un alcance con plazo cerrado y precio cerrado. Sin sorpresas, sin scope abierto, sin facturación por hora.',
   },
   {
     q: '¿Cuánto tarda en estar funcionando?',
-    a: 'La mayoría de las automatizaciones entran en producción en dos a siete semanas. Trabajamos en sprints cortos con demos en vivo, así ves avances reales cada semana, no una entrega gigante dentro de tres meses.',
+    a: 'Nuestro ciclo de construcción es de cuatro a siete semanas, dependiendo del producto. El calendario total de kick-off a producción depende también de tu equipo: disponibilidad de datos, accesos de IT, decisiones internas. Eso lo medimos por separado y lo dejamos claro antes de empezar.',
   },
   {
-    q: '¿Qué pasa si no funciona como esperábamos?',
-    a: 'Antes de empezar cerramos juntos la métrica de éxito. Medimos contra eso en producción y ajustamos hasta que la automatización está impecable. Recién ahí pasamos a la siguiente. Si algo no mueve el número, no seguimos por seguir.',
+    q: '¿Tengo que reemplazar los sistemas que ya uso?',
+    a: 'No. Construimos arriba de lo que ya tenés. Tu ERP, tu CRM, tu WhatsApp, tus planillas, tu canal de cobros. Conectamos con APIs cuando existen y trabajamos sobre los datos cuando no. La regla es: cero migraciones, cero reemplazos.',
   },
   {
-    q: '¿Necesitamos un equipo técnico interno para usar esto?',
-    a: 'No. Diseñamos cada sistema para que tu equipo lo use desde donde ya trabaja, sin aprender herramientas nuevas. Nosotros nos encargamos de la parte técnica, del mantenimiento y de la mejora continua.',
+    q: '¿Qué pasa si mi equipo de IT no nos da los accesos a tiempo?',
+    a: 'Es una de las trabas más comunes. Por eso separamos dos cronogramas: nuestro ciclo de construcción (lo que dependemos de nosotros) y el calendario total (lo que depende de tu equipo). Te ayudamos a desbloquear a IT desde la fase de diagnóstico, pero esos plazos los manejás vos. Sin esa claridad arriba de la mesa, prometer "4 semanas a producción" sería deshonesto.',
   },
   {
-    q: '¿Cómo es el primer paso y cuánto cuesta?',
-    a: 'El primer paso es una reunión de diagnóstico de cuarenta y cinco minutos, sin costo y sin venderte nada. Si tiene sentido avanzar, hacemos un workshop donde cerramos alcance, plazo y precio antes de escribir una sola línea de código. Sin sorpresas.',
+    q: '¿Necesito un equipo técnico interno para usar esto?',
+    a: 'No. Todo lo que entregamos lo usa tu equipo operativo desde donde ya trabaja: WhatsApp, navegador, herramientas que ya conocen. Tu IT participa solo en accesos e integraciones, no en mantenimiento diario.',
+  },
+  {
+    q: '¿Mis datos están seguros? ¿A dónde van?',
+    a: 'Tus datos son tuyos y se quedan dentro de tu empresa. Trabajamos dentro de tus propios sistemas y entornos, con accesos controlados y todo auditable. No usamos la información de tu empresa para entrenar modelos de terceros. Definimos juntos qué datos toca cada automatización y quién puede verlos.',
   },
   {
     q: '¿La IA va a reemplazar a mi equipo?',
-    a: 'No es el objetivo. Automatizamos lo repetitivo para que tu equipo dedique sus horas a lo que mueve la aguja: vender, decidir, atender bien al cliente que lo necesita. La gente queda para lo que la gente hace mejor.',
+    a: 'No. Tu equipo deja de hacer lo repetitivo y se dedica a lo que mueve la aguja. La gente que hoy carga datos a mano pasa a tomar decisiones con datos limpios. La gente que hoy persigue información pasa a usarla. Lo que se elimina son las tareas, no las personas.',
   },
 ]
 
@@ -49,14 +53,14 @@ function FaqItem({
   onToggle: () => void
 }) {
   return (
-    <div className="border-b border-carbon/10">
+    <div className="border-b border-border">
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={open}
         className="flex w-full items-center justify-between gap-6 py-6 text-left"
       >
-        <span className="font-display text-[18px] font-medium tracking-[-0.01em] text-carbon md:text-[20px]">
+        <span className="font-display text-[18px] font-medium tracking-[-0.01em] text-offwhite md:text-[20px]">
           {q}
         </span>
         <span
@@ -77,7 +81,7 @@ function FaqItem({
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="max-w-2xl pb-6 font-sans text-[16px] leading-[1.65] text-[#424242] md:text-[17px]">
+            <p className="max-w-2xl pb-6 font-sans text-[16px] leading-[1.65] text-muted md:text-[17px]">
               {a}
             </p>
           </motion.div>
@@ -91,16 +95,16 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number>(0)
 
   return (
-    <section className="bg-offwhite py-24 text-carbon md:py-32 lg:py-40">
+    <section className="py-24 md:py-32 lg:py-40">
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
             <Reveal>
-              <Eyebrow>Preguntas frecuentes</Eyebrow>
+              <Eyebrow>Preguntas</Eyebrow>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="mt-5 font-display text-[clamp(32px,4vw,48px)] font-semibold leading-[1.08] tracking-[-0.02em] text-carbon text-balance">
-                Lo que casi todos preguntan antes de empezar.
+              <h2 className="mt-5 font-display text-[clamp(32px,4vw,48px)] font-semibold leading-[1.08] tracking-[-0.02em] text-offwhite text-balance">
+                Lo que la mayoría se pregunta antes de empezar.
               </h2>
             </Reveal>
           </div>

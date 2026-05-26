@@ -23,7 +23,7 @@ export function Hero() {
       <Container>
         <div className="max-w-4xl">
           <motion.div variants={item} custom={0} initial="hidden" animate="show">
-            <Eyebrow>Sistemas IA y automatizaciones</Eyebrow>
+            <Eyebrow>Operational AI Company · Paraguay</Eyebrow>
           </motion.div>
 
           <motion.h1
@@ -33,7 +33,7 @@ export function Hero() {
             animate="show"
             className="mt-6 font-display font-semibold text-[clamp(48px,7vw,96px)] leading-[1.02] tracking-[-0.03em] text-offwhite text-balance"
           >
-            Automatizamos tus operaciones sobre los sistemas que ya tenés.
+            Automatizamos tu operación sobre los sistemas que ya tenés.
           </motion.h1>
 
           <motion.p
@@ -43,8 +43,8 @@ export function Hero() {
             animate="show"
             className="mt-8 max-w-2xl font-sans text-[18px] leading-[1.55] text-muted md:text-[20px]"
           >
-            En semanas, con IA aplicada donde realmente duele. Sin reemplazar nada
-            de lo que ya funciona.
+            Tu equipo deja de cargar datos a mano, perseguir información y aprobar
+            todo sobre la hora. Sin reemplazar nada de lo que ya funciona.
           </motion.p>
 
           <motion.div
@@ -54,12 +54,12 @@ export function Hero() {
             animate="show"
             className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
           >
-            <ButtonLink href={site.calendly} variant="primary" size="lg" external>
+            <ButtonLink href={site.agendar} variant="primary" size="lg">
               {cta.primary}
               <span aria-hidden="true">→</span>
             </ButtonLink>
-            <ButtonLink href="/newsletter" variant="ghost" size="lg">
-              Suscribite al newsletter
+            <ButtonLink href="#como-trabajamos" variant="ghost" size="lg">
+              Cómo trabajamos
             </ButtonLink>
           </motion.div>
         </div>

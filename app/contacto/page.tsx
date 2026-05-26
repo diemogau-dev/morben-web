@@ -26,7 +26,7 @@ export default function ContactPage() {
             <div className="overflow-hidden rounded-xl border border-border/60 bg-surface">
               <iframe
                 src={site.calendly}
-                title="Agendar reunión de diagnóstico con Morben"
+                title="Agendar diagnóstico con Morben"
                 className="h-[700px] w-full"
                 loading="lazy"
               />

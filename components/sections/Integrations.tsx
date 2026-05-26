@@ -20,7 +20,6 @@ const chips = [
   'PDFs',
   'Excel',
   'Bases SQL',
-  'APIs REST y GraphQL',
 ]
 
 export function Integrations() {

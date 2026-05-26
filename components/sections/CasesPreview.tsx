@@ -14,7 +14,7 @@ export function CasesPreview() {
         <SectionHeading
           eyebrow="Casos"
           title="Empresas que ya están operando distinto."
-          subtitle="Casos reales, con números reales. Sin maquillar, sin promesas."
+          subtitle="Operación nueva, en producción, en empresas paraguayas reales."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-3">
