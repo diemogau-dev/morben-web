@@ -94,8 +94,26 @@ export function Footer() {
                   WhatsApp {site.whatsappDisplay}
                 </a>
               </li>
-              {/* TODO: confirmar Instagram de la empresa con Diego */}
-              {/* TODO: confirmar LinkedIn de la empresa con Diego */}
+              <li>
+                <a
+                  href={site.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-[15px] text-muted transition-colors hover:text-offwhite"
+                >
+                  Instagram {site.social.instagramHandle}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={site.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-[15px] text-muted transition-colors hover:text-offwhite"
+                >
+                  LinkedIn
+                </a>
+              </li>
             </ul>
             <a
               href={site.calendly}

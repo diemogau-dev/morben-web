@@ -10,10 +10,10 @@ export const site = {
   whatsappDisplay: '+595 981 625 546',
   calendly: 'https://calendly.com/diemogau/morben',
   location: 'Asunción, Paraguay',
-  // TODO: confirmar redes sociales de la empresa con Diego
   social: {
-    instagram: '', // TODO: @morben.ai
-    linkedin: '', // TODO: linkedin.com/company/morben
+    instagram: 'https://instagram.com/morben.ia',
+    instagramHandle: '@morben.ia',
+    linkedin: 'https://www.linkedin.com/company/morben-ia',
   },
 } as const
 
