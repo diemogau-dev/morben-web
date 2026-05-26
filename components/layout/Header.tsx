@@ -38,6 +38,7 @@ export function Header() {
     pathname === href || pathname.startsWith(`${href}/`)
 
   return (
+    <>
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-colors duration-300',
@@ -92,11 +93,12 @@ export function Header() {
           <Menu className="h-6 w-6" />
         </button>
       </Container>
+      </header>
 
       {/* Mobile full-screen menu */}
       <div
         className={cn(
-          'fixed inset-0 z-50 flex flex-col bg-carbon transition-transform duration-300 md:hidden',
+          'fixed inset-0 z-[60] flex flex-col bg-carbon transition-transform duration-300 md:hidden',
           open ? 'translate-x-0' : 'translate-x-full',
         )}
         aria-hidden={!open}
@@ -152,6 +154,6 @@ export function Header() {
           </a>
         </div>
       </div>
-    </header>
+    </>
   )
 }

@@ -30,7 +30,7 @@ export function TeamPreview() {
               <Eyebrow>Equipo</Eyebrow>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className={`mt-5 ${displayL}`}>Cuatro fundadores. Una sola mesa.</h2>
+              <h2 className={`mt-5 ${displayL}`}>El equipo Morben.</h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-xl font-sans text-[18px] leading-[1.55] text-muted md:text-[20px]">

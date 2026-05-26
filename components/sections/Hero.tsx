@@ -31,7 +31,7 @@ export function Hero() {
             custom={0.2}
             initial="hidden"
             animate="show"
-            className="mt-6 font-display font-semibold text-[clamp(48px,7vw,96px)] leading-[1.02] tracking-[-0.03em] text-offwhite text-balance"
+            className="mt-6 font-display font-semibold text-[clamp(40px,8vw,96px)] leading-[1.04] tracking-[-0.03em] text-offwhite text-balance"
           >
             Automatizamos tu operación sobre los sistemas que ya tenés.
           </motion.h1>
