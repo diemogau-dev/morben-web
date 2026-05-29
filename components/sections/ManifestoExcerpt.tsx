@@ -5,18 +5,14 @@ import { Eyebrow } from '@/components/ui/Eyebrow'
 import { displayL } from '@/components/ui/SectionHeading'
 
 const paragraphs: { text: string; emphasis?: boolean }[] = [
-  { text: 'Una empresa que crece. Un equipo que empuja. Números que cierran.' },
   {
-    text: 'Pero los procesos críticos viven en la cabeza de tres personas. Si una falta, algo se atrasa. Los reportes salen los domingos a la noche. Vos seguís aprobando cosas por WhatsApp los fines de semana.',
+    text: 'Los procesos críticos viven en la cabeza de tres personas. Los reportes salen los domingos a la noche. Vos seguís aprobando cosas por WhatsApp los fines de semana.',
   },
   {
-    text: 'Mientras tanto, afuera, el mundo cambió. Lo que hace dos años costaba doscientos mil dólares hoy cuesta dos mil. La barrera técnica colapsó. Y eso significa una sola cosa: durante los próximos tres años se va a definir quién, en Paraguay, sale adelante con esto, y quién mira desde afuera cómo otros toman la delantera.',
+    text: 'Y afuera, el mundo cambió: lo que hace dos años costaba doscientos mil dólares hoy cuesta dos mil. En los próximos tres años se define quién, en Paraguay, sale adelante con esto y quién mira desde afuera.',
   },
   {
-    text: 'Y en el medio, lo que aparece es ruido. Gente que vende "soluciones de IA" que son menúes de WhatsApp con cuatro respuestas. Agencias que se rebrandearon "AI-first" porque enchufaron ChatGPT al final de sus servicios de siempre. Consultoras que entregan business plans para el cajón de algún gerente.',
-  },
-  {
-    text: 'Morben es lo que falta en el medio. Una Operational AI Company: gente que se sienta con vos, entiende cómo funciona tu empresa de verdad, y construye operación nueva donde realmente duele. Plazo cerrado, precio cerrado, métrica de éxito cerrada antes de cotizar.',
+    text: 'Morben es lo que falta en el medio. Nos sentamos con vos, entendemos cómo funciona tu empresa de verdad, y construimos operación nueva donde realmente duele. Plazo, precio y métrica de éxito cerrados antes de cotizar.',
     emphasis: true,
   },
 ]

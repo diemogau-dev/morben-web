@@ -40,6 +40,12 @@ export function HowWeWork() {
             Cuatro fases. Plazo cerrado. Métrica acordada antes de empezar.
           </h2>
         </Reveal>
+        <Reveal delay={0.08}>
+          <p className="mt-6 max-w-2xl font-sans text-[16px] leading-[1.65] text-[#424242] md:text-[17px]">
+            No empezamos de cero cada vez: reutilizamos sistemas que ya probamos en
+            otras operaciones. Por eso vamos en semanas, no en meses.
+          </p>
+        </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-x-16 gap-y-14 md:mt-20 md:grid-cols-2">
           {phases.map((phase, i) => (

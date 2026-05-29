@@ -29,7 +29,6 @@ export const navLinks = [
   { label: 'Casos', href: '/casos' },
   { label: 'Industrias', href: '/industrias' },
   { label: 'Equipo', href: '/equipo' },
-  { label: 'Blog', href: '/blog' },
 ] as const
 
 export const footerNav = [
@@ -37,7 +36,6 @@ export const footerNav = [
   { label: 'Industrias', href: '/industrias' },
   { label: 'Equipo', href: '/equipo' },
   { label: 'Sobre nosotros', href: '/sobre-nosotros' },
-  { label: 'Blog', href: '/blog' },
   { label: 'Newsletter', href: '/newsletter' },
   { label: 'Contacto', href: '/contacto' },
 ] as const

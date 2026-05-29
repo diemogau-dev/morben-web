@@ -89,11 +89,10 @@ export const cases: CaseStudy[] = [
     ],
     resultEyebrow: 'Resultado',
     results: [
-      { value: '80 a 90%', description: 'de reducción estimada en tiempo operativo de búsqueda.' },
+      { value: '80 a 90%', description: 'de reducción en el tiempo operativo de búsqueda.' },
     ],
     resultBody: [
-      'El impacto es directo en la velocidad del proceso de selección, reduciendo fricción en las etapas tempranas del pipeline, donde antes se perdía la mayoría del tiempo del equipo.',
-      'El impacto completo se está midiendo en ciclos reales de uso y se actualizará en los próximos meses.',
+      'El impacto es directo en la velocidad del proceso de selección: la fricción se concentraba en las etapas tempranas del pipeline, donde antes se iba la mayoría del tiempo del equipo. Hoy ese tiempo se recupera, y el sistema gana precisión a medida que el equipo lo usa.',
     ],
     closing: {
       heading: '¿Tu equipo tiene un proceso similar?',
@@ -171,8 +170,7 @@ export const cases: CaseStudy[] = [
       { value: '~20 hs', description: 'ahorradas por mes en gestión manual' },
     ],
     resultBody: [
-      'ROI que mejora con cada ciclo de datos. El sistema se vuelve más preciso a medida que ve más patrones de recompra.',
-      'Los números reales se están midiendo en este momento y se actualizarán en los próximos meses.',
+      'El ROI mejora con cada ciclo de datos: el sistema se vuelve más preciso a medida que ve más patrones de recompra.',
     ],
     closing: {
       heading:

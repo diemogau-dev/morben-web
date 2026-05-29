@@ -23,7 +23,7 @@ export function Hero() {
       <Container>
         <div className="max-w-4xl">
           <motion.div variants={item} custom={0} initial="hidden" animate="show">
-            <Eyebrow>Operational AI Company · Paraguay</Eyebrow>
+            <Eyebrow>Sistemas con IA para empresas paraguayas</Eyebrow>
           </motion.div>
 
           <motion.h1
@@ -33,7 +33,7 @@ export function Hero() {
             animate="show"
             className="mt-6 font-display font-semibold text-[clamp(40px,8vw,96px)] leading-[1.04] tracking-[-0.03em] text-offwhite text-balance"
           >
-            Automatizamos tu operación sobre los sistemas que ya tenés.
+            Operación nueva, funcionando en semanas. Sobre los sistemas que ya tenés.
           </motion.h1>
 
           <motion.p
