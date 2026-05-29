@@ -5,29 +5,32 @@ import { Eyebrow } from '@/components/ui/Eyebrow'
 const phases = [
   {
     number: '01',
-    title: 'Workshop',
-    body: 'Empezamos por entender. Nos sentamos contigo y tu equipo. Mapeamos procesos, datos, sistemas y cuellos de botella reales. Salimos del workshop con un plan concreto: qué automatizar primero, las herramientas a utilizar, qué impacto esperar, en qué orden ejecutar.',
+    title: 'Diagnóstico',
+    body: 'Empezamos por entender. Nos sentamos con vos y tu equipo. Mapeamos procesos, datos, sistemas y cuellos de botella reales. Salimos del diagnóstico con un plan concreto: qué automatizar primero, qué impacto esperar, en qué orden ejecutar, con plazo y precio cerrado.',
   },
   {
     number: '02',
     title: 'Desarrollo',
-    body: 'Construimos lo acordado en sprints de una a dos semanas, con demos en vivo a tu equipo. Si algo cambia, lo ajustamos en el sprint siguiente, no en una nueva propuesta de tres meses. Velocidad sobre todo.',
+    body: 'Construimos lo acordado en sprints de una a dos semanas, con demos en vivo. Si algo cambia, lo ajustamos en el sprint siguiente, no en una nueva propuesta de tres meses. Velocidad sobre todo.',
   },
   {
     number: '03',
     title: 'Implementación',
-    body: 'Subimos el sistema a producción controlado por tu equipo y ya siendo parte de tu operación. Medimos al detalle lo que acordamos como métrica de éxito en el workshop. Ajustamos lo que haga falta. Cuando una automatización está impecable, pasamos a la siguiente.',
+    body: 'Subimos el sistema a producción dentro de tu operación. Medimos la métrica de éxito acordada en el diagnóstico. Ajustamos lo que haga falta. Cuando una automatización está impecable, pasamos a la siguiente.',
   },
   {
     number: '04',
     title: 'Optimización',
-    body: 'A partir del sistema operando entramos en modo optimización continua. Monitoreamos, mejoramos, agregamos casos de uso nuevos, nuevas LLMs, herramientas. Tu sistema deja de ser un proyecto y pasa a ser parte del proceso operativo de la empresa y la cultura.',
+    body: 'Tu sistema deja de ser un proyecto y pasa a ser parte de la operación. Monitoreamos, mejoramos, agregamos nuevos casos de uso, integramos nuevos modelos cuando aparecen. Tu operación se vuelve más rápida cada mes.',
   },
 ]
 
 export function HowWeWork() {
   return (
-    <section className="bg-offwhite py-24 text-carbon md:py-32 lg:py-40">
+    <section
+      id="como-trabajamos"
+      className="scroll-mt-20 bg-offwhite py-24 text-carbon md:py-32 lg:py-40"
+    >
       <Container>
         <Reveal>
           <Eyebrow>Cómo trabajamos</Eyebrow>
@@ -36,6 +39,12 @@ export function HowWeWork() {
           <h2 className="mt-5 max-w-4xl font-display text-[clamp(40px,5vw,64px)] font-semibold leading-[1.05] tracking-[-0.02em] text-carbon text-balance">
             Cuatro fases. Plazo cerrado. Métrica acordada antes de empezar.
           </h2>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <p className="mt-6 max-w-2xl font-sans text-[16px] leading-[1.65] text-[#424242] md:text-[17px]">
+            No empezamos de cero cada vez: reutilizamos sistemas que ya probamos en
+            otras operaciones. Por eso vamos en semanas, no en meses.
+          </p>
         </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-x-16 gap-y-14 md:mt-20 md:grid-cols-2">

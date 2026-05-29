@@ -2,31 +2,33 @@ export const site = {
   name: 'Morben',
   domain: 'morben.com.py',
   url: 'https://morben.com.py',
-  tagline: 'Sistemas IA y automatizaciones',
+  tagline: 'Operational AI Company · Paraguay',
   description:
-    'Automatizamos operaciones empresariales con IA sobre los sistemas que ya tenés. En semanas, no en años.',
-  email: 'morbenlab@gmail.com',
+    'Operational AI Company. Construimos operación nueva con IA sobre los sistemas que las empresas paraguayas ya tienen. En semanas, no en años.',
+  email: 'hola@morben.com.py',
   whatsapp: '595981625546',
   whatsappDisplay: '+595 981 625 546',
   calendly: 'https://calendly.com/diemogau/morben',
+  agendar: '/agendar',
   location: 'Asunción, Paraguay',
   social: {
-    instagram: 'https://instagram.com/morben.ia',
-    instagramHandle: '@morben.ia',
     linkedin: 'https://www.linkedin.com/company/morben-ia',
+    instagram: 'https://www.instagram.com/morbenlab/',
+    instagramHandle: '@morbenlab',
+    twitter: 'https://x.com/morbenlab',
+    twitterHandle: '@morbenlab',
   },
 } as const
 
 export const cta = {
-  primary: 'Agendar reunión de diagnóstico',
-  header: 'Agendar reunión',
+  primary: 'Agendar diagnóstico',
+  header: 'Agendar diagnóstico',
 } as const
 
 export const navLinks = [
   { label: 'Casos', href: '/casos' },
   { label: 'Industrias', href: '/industrias' },
   { label: 'Equipo', href: '/equipo' },
-  { label: 'Blog', href: '/blog' },
 ] as const
 
 export const footerNav = [
@@ -34,7 +36,6 @@ export const footerNav = [
   { label: 'Industrias', href: '/industrias' },
   { label: 'Equipo', href: '/equipo' },
   { label: 'Sobre nosotros', href: '/sobre-nosotros' },
-  { label: 'Blog', href: '/blog' },
   { label: 'Newsletter', href: '/newsletter' },
   { label: 'Contacto', href: '/contacto' },
 ] as const

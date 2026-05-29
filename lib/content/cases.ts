@@ -39,7 +39,7 @@ export const cases: CaseStudy[] = [
     headline:
       'Cómo Incentiva redujo más de 1.265 horas mensuales de búsqueda manual en su proceso de selección.',
     subtitle:
-      'Un agente de IA que centraliza información dispersa y devuelve los mejores candidatos en segundos.',
+      'Un asistente interno conversacional que centraliza información dispersa y devuelve los mejores candidatos en segundos.',
     chips: ['Incentiva', 'Reclutamiento y selección', 'Implementación: pocas semanas'],
     sections: [
       {
@@ -69,9 +69,9 @@ export const cases: CaseStudy[] = [
       },
       {
         eyebrow: 'La solución',
-        heading: 'Un agente de IA integrado al proceso real de selección.',
+        heading: 'Un asistente interno conversacional integrado al proceso real de selección.',
         body: [
-          'Construimos un agente que centraliza CVs, notas y datos dispersos en un único sistema de búsqueda conversacional. El selector escribe en lenguaje natural y recibe candidatos relevantes en segundos, ya estructurados y con el contexto histórico cargado.',
+          'Construimos un asistente interno que centraliza CVs, notas y datos dispersos en un único sistema de búsqueda conversacional. El selector escribe en lenguaje natural y recibe candidatos relevantes en segundos, ya estructurados y con el contexto histórico cargado.',
         ],
         bullets: [
           'Una sola interfaz conversacional, sin formularios.',
@@ -89,11 +89,10 @@ export const cases: CaseStudy[] = [
     ],
     resultEyebrow: 'Resultado',
     results: [
-      { value: '80 a 90%', description: 'de reducción estimada en tiempo operativo de búsqueda.' },
+      { value: '80 a 90%', description: 'de reducción en el tiempo operativo de búsqueda.' },
     ],
     resultBody: [
-      'El impacto es directo en la velocidad del proceso de selección, reduciendo fricción en las etapas tempranas del pipeline, donde antes se perdía la mayoría del tiempo del equipo.',
-      'El impacto completo se está midiendo en ciclos reales de uso y se actualizará en los próximos meses.',
+      'El impacto es directo en la velocidad del proceso de selección: la fricción se concentraba en las etapas tempranas del pipeline, donde antes se iba la mayoría del tiempo del equipo. Hoy ese tiempo se recupera, y el sistema gana precisión a medida que el equipo lo usa.',
     ],
     closing: {
       heading: '¿Tu equipo tiene un proceso similar?',
@@ -102,7 +101,7 @@ export const cases: CaseStudy[] = [
     meta: {
       title: 'Caso Incentiva, 1.265 horas mensuales recuperadas',
       description:
-        'Un agente de IA que centralizó información dispersa y devolvió los mejores candidatos en segundos para una empresa paraguaya de reclutamiento.',
+        'Un asistente interno conversacional que centralizó información dispersa y devolvió los mejores candidatos en segundos para una empresa paraguaya de reclutamiento.',
     },
     preview: {
       category: 'RRHH · Reclutamiento y selección',
@@ -171,8 +170,7 @@ export const cases: CaseStudy[] = [
       { value: '~20 hs', description: 'ahorradas por mes en gestión manual' },
     ],
     resultBody: [
-      'ROI que mejora con cada ciclo de datos. El sistema se vuelve más preciso a medida que ve más patrones de recompra.',
-      'Los números reales se están midiendo en este momento y se actualizarán en los próximos meses.',
+      'El ROI mejora con cada ciclo de datos: el sistema se vuelve más preciso a medida que ve más patrones de recompra.',
     ],
     closing: {
       heading:

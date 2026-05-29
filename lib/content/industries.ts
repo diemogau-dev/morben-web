@@ -27,9 +27,9 @@ export const industries: Industry[] = [
       heading: 'Tres frentes claros, con impacto medible en 90 días.',
       body: 'En servicios financieros el ROI es directo y rápido: menos mora, más cierres, menos horas perdidas. Trabajamos sobre los tres frentes que más mueven el número.',
       bullets: [
-        'Cobranza priorizada con scoring de recupero y secuencias automáticas.',
-        'Asistente IA para oficiales de crédito con normativa, historial del cliente y políticas en tiempo real.',
-        'Análisis automatizado de carpetas crediticias con detección de red flags y scoring asistido.',
+        'Cobranza con priorización automática del recupero y secuencias automáticas.',
+        'Asistente interno para oficiales de crédito con normativa, historial del cliente y políticas en tiempo real.',
+        'Análisis automatizado de carpetas crediticias con detección de red flags y ranking automático de prioridad.',
       ],
     },
     relatedCases: [],

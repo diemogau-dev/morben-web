@@ -40,8 +40,8 @@ export function Footer() {
               <Logo size={30} />
             </Link>
             <p className="mt-6 max-w-xs font-sans text-[15px] leading-[1.6] text-muted">
-              Sistemas IA y automatizaciones que reemplazan el trabajo manual
-              repetitivo de tu equipo. En semanas, no en años.
+              Operational AI Company. Construimos operación nueva con IA sobre los
+              sistemas que las empresas paraguayas ya tienen. En semanas, no en años.
             </p>
             <p className="mt-6 font-sans text-[15px] text-muted">
               {site.location} <span aria-hidden="true">🇵🇾</span>
@@ -96,6 +96,16 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href={site.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-[15px] text-muted transition-colors hover:text-offwhite"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
                   href={site.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -106,24 +116,22 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={site.social.linkedin}
+                  href={site.social.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-sans text-[15px] text-muted transition-colors hover:text-offwhite"
                 >
-                  LinkedIn
+                  X {site.social.twitterHandle}
                 </a>
               </li>
             </ul>
-            <a
-              href={site.calendly}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href={site.agendar}
               className="mt-6 inline-flex items-center gap-2 font-sans text-[15px] text-orange transition-colors hover:text-orange-light"
             >
               {cta.primary}
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -16,7 +16,7 @@ export default function TeamPage() {
     <>
       <PageHero
         eyebrow="Equipo"
-        title="Cuatro fundadores. Una sola mesa."
+        title="El equipo Morben."
         subtitle={
           <>
             Morben está fundada por cuatro operadores con más de cuarenta años

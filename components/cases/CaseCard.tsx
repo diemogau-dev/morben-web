@@ -33,10 +33,7 @@ export function CaseCard({ study }: { study: CaseStudy }) {
       </h3>
 
       <div className="mt-8 flex flex-1 flex-col justify-end">
-        <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-orange">
-          Resultado
-        </p>
-        <p className="mt-2 font-sans text-[15px] leading-[1.5] text-muted">
+        <p className="font-sans text-[15px] leading-[1.5] text-muted">
           {study.preview.result}
         </p>
 

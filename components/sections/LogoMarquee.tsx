@@ -27,7 +27,7 @@ function LogoRow() {
             alt={logo.alt}
             width={logo.w}
             height={logo.h}
-            className="h-7 w-auto opacity-60 md:h-8"
+            className="h-7 w-auto opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 md:h-8"
           />
         </li>
       ))}
@@ -42,7 +42,7 @@ export function LogoMarquee() {
         <div className="flex flex-col items-center text-center">
           <Eyebrow>Confianza</Eyebrow>
           <h2 className="mt-3 font-sans text-[15px] text-muted">
-            Empresas con las que ya construimos.
+            Empresas con las que trabajamos.
           </h2>
         </div>
       </Container>

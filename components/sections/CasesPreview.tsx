@@ -6,7 +6,7 @@ import { CaseCard } from '@/components/cases/CaseCard'
 import { cases } from '@/lib/content/cases'
 
 export function CasesPreview() {
-  const featured = cases.slice(0, 3)
+  const featured = cases.slice(0, 2)
 
   return (
     <section className="py-24 md:py-32 lg:py-40">
@@ -14,10 +14,10 @@ export function CasesPreview() {
         <SectionHeading
           eyebrow="Casos"
           title="Empresas que ya están operando distinto."
-          subtitle="Casos reales, con números reales. Sin maquillar, sin promesas."
+          subtitle="Operación nueva, en producción, en empresas paraguayas reales."
         />
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 md:mt-20 md:grid-cols-2">
           {featured.map((study, i) => (
             <Reveal key={study.slug} delay={i * 0.08} className="h-full">
               <CaseCard study={study} />
