@@ -3,6 +3,14 @@
 Contexto permanente del proyecto. Este archivo se lee automáticamente al inicio
 de cada sesión. Mantenerlo actualizado a medida que evoluciona Morben y el sitio.
 
+## Contexto estratégico (leer siempre)
+
+El contexto completo de la empresa (tesis, moat, modelo de negocio, verticales,
+métricas, reglas de comunicación, GTM) vive en
+**`morben-package/07-contexto-estrategico.md`**. Leerlo al inicio de cada sesión
+para entender Morben antes de tocar copy o estrategia. Mantenerlo actualizado con
+cada conversación estratégica que tengamos.
+
 ## Qué es Morben
 
 - **Operational AI Company** con base en Asunción, Paraguay 🇵🇾.
