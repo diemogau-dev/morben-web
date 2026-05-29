@@ -43,9 +43,9 @@ export function ClosingCTA() {
 
         <div className="mx-auto my-20 h-px w-[60px] bg-orange" aria-hidden="true" />
 
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+        <div className="mx-auto max-w-xl">
           <Reveal>
-            <div>
+            <div className="text-center">
               <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-orange">
                 Newsletter Morben
               </p>
@@ -53,28 +53,8 @@ export function ClosingCTA() {
                 Una vez por semana. Un caso real, un framework operativo, cero humo.
                 Pensado para dueños y gerentes que están construyendo operación nueva.
               </p>
-              <div className="mt-6">
+              <div className="mt-6 flex justify-center">
                 <NewsletterForm />
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.08}>
-            <div className="flex h-full flex-col rounded-2xl border border-border bg-carbon/40 p-7">
-              <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-hint">
-                Lead magnet
-              </p>
-              <p className="mt-4 font-sans text-[16px] leading-[1.6] text-muted">
-                ¿Querés un anticipo? Descargá el{' '}
-                <span className="text-offwhite">Diagnóstico de Madurez Operativa</span>:
-                27 preguntas para saber si tu empresa está lista para automatizar — y
-                por dónde empezar.
-              </p>
-              <div className="mt-auto pt-6">
-                <ButtonLink href="/diagnostico" variant="primary">
-                  Descargar gratis
-                  <span aria-hidden="true">→</span>
-                </ButtonLink>
               </div>
             </div>
           </Reveal>

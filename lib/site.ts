@@ -13,8 +13,10 @@ export const site = {
   location: 'Asunción, Paraguay',
   social: {
     linkedin: 'https://www.linkedin.com/company/morben-ia',
-    instagram: 'https://instagram.com/morben.ia',
-    instagramHandle: '@morben.ia',
+    instagram: 'https://www.instagram.com/morbenlab/',
+    instagramHandle: '@morbenlab',
+    twitter: 'https://x.com/morbenlab',
+    twitterHandle: '@morbenlab',
   },
 } as const
 

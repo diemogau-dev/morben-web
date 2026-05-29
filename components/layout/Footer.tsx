@@ -114,6 +114,16 @@ export function Footer() {
                   Instagram {site.social.instagramHandle}
                 </a>
               </li>
+              <li>
+                <a
+                  href={site.social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-[15px] text-muted transition-colors hover:text-offwhite"
+                >
+                  X {site.social.twitterHandle}
+                </a>
+              </li>
             </ul>
             <Link
               href={site.agendar}
