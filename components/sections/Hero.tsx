@@ -33,7 +33,7 @@ export function Hero() {
             animate="show"
             className="mt-6 font-display font-semibold text-[clamp(40px,8vw,96px)] leading-[1.04] tracking-[-0.03em] text-offwhite text-balance"
           >
-            Operación nueva, funcionando en semanas. Sobre los sistemas que ya tenés.
+            Tu operación, funcionando sola. Sobre los sistemas que ya tenés.
           </motion.h1>
 
           <motion.p
