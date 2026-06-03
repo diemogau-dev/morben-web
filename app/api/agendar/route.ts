@@ -2,16 +2,13 @@ import { NextResponse } from 'next/server'
 import { z } from 'zod'
 
 const schema = z.object({
-  nombre: z.string().min(1),
   cargo: z.string().min(1),
   empresa: z.string().min(1),
-  email: z.string().email(),
+  rubro: z.string().min(1),
   whatsapp: z.string().min(1),
   empleados: z.string().min(1),
   facturacion: z.string().min(1),
-  presupuesto: z.string().min(1),
-  mensaje: z.string().optional(),
-  califica: z.boolean(),
+  area: z.array(z.string()).min(1),
 })
 
 export async function POST(request: Request) {
@@ -22,9 +19,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false }, { status: 400 })
   }
 
-  // TODO: enviar cada respuesta (califique o no) por email a hola@morben.com.py
-  // cuando se defina el proveedor (Resend / Brevo). Esto da telemetría de quién
-  // intentó agendar. Por ahora validamos y devolvemos ok.
+  // TODO: enviar cada respuesta por email a hola@morben.com.py cuando se defina
+  // el proveedor (Resend / Brevo). Esto da telemetría de quién intentó agendar,
+  // incluso si después no completa la reserva en Calendly. Por ahora validamos
+  // y devolvemos ok. El filtro de quién califica lo hace el equipo a mano.
 
   return NextResponse.json({ ok: true })
 }

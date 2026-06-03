@@ -4,6 +4,7 @@ import './globals.css'
 import { poppins, inter, mono } from './fonts'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { WhatsAppFab } from '@/components/layout/WhatsAppFab'
 import { site } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Header />
         <main id="contenido">{children}</main>
         <Footer />
+        <WhatsAppFab />
         <Analytics />
       </body>
     </html>

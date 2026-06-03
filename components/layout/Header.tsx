@@ -69,15 +69,6 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <a
-            href={`https://wa.me/${site.whatsapp}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Escribinos por WhatsApp"
-            className="text-muted transition-colors hover:text-orange"
-          >
-            <WhatsAppIcon className="h-5 w-5" />
-          </a>
           <ButtonLink href={site.agendar} variant="outline">
             {cta.header}
             <span aria-hidden="true">→</span>

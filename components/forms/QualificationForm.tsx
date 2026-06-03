@@ -4,11 +4,21 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { ButtonLink } from '@/components/ui/Button'
-import { NewsletterForm } from '@/components/forms/NewsletterForm'
 import { site } from '@/lib/site'
 
+const RUBROS = [
+  'Servicios financieros',
+  'Aseguradoras',
+  'Servicios profesionales',
+  'Agronegocios y ganaderas',
+  'Bienes raíces',
+  'Retail e importadoras',
+  'Clínicas y salud',
+  'Otro',
+]
+
 const EMPLEADOS = ['Menos de 10', '10 a 50', '50 a 200', '200 a 500', 'Más de 500']
+
 const FACTURACION = [
   'Menos de Gs. 500 millones',
   'Gs. 500 a 2.000 millones',
@@ -16,29 +26,26 @@ const FACTURACION = [
   'Gs. 10.000 a 50.000 millones',
   'Más de Gs. 50.000 millones',
 ]
-const PRESUPUESTO = [
-  'Menos de Gs. 50 millones',
-  'Gs. 50 a 150 millones',
-  'Gs. 150 a 500 millones',
-  'Más de Gs. 500 millones',
-  'Lo necesario para optimizar operaciones',
+
+const AREAS = [
+  'Administración',
+  'Finanzas',
+  'Contabilidad',
+  'Ventas / Comercial',
+  'Marketing',
+  'Operaciones / Logística',
+  'Atención al cliente',
+  'Otro',
 ]
 
-const PERSONAL_EMAIL = /@(gmail|hotmail|yahoo)\./i
-
 const schema = z.object({
-  nombre: z.string().min(1, { message: 'Ingresá tu nombre completo.' }),
   cargo: z.string().min(1, { message: 'Ingresá tu cargo.' }),
   empresa: z.string().min(1, { message: 'Ingresá el nombre de tu empresa.' }),
-  email: z
-    .string()
-    .min(1, { message: 'Ingresá tu email.' })
-    .email({ message: 'Ese email no parece válido.' }),
+  rubro: z.string().min(1, { message: 'Elegí una opción.' }),
   whatsapp: z.string().min(6, { message: 'Ingresá tu WhatsApp con código de país.' }),
   empleados: z.string().min(1, { message: 'Elegí una opción.' }),
   facturacion: z.string().min(1, { message: 'Elegí una opción.' }),
-  presupuesto: z.string().min(1, { message: 'Elegí una opción.' }),
-  mensaje: z.string().optional(),
+  area: z.array(z.string()).min(1, { message: 'Elegí al menos un área.' }),
 })
 
 type FormValues = z.infer<typeof schema>
@@ -48,8 +55,6 @@ const inputClass =
 const labelClass = 'mb-2 block font-sans text-[14px] text-offwhite'
 const errorClass = 'mt-1.5 font-sans text-[13px] text-orange-light'
 
-type Result = 'qualified' | 'rejected'
-
 function Field({
   label,
   htmlFor,
@@ -57,7 +62,7 @@ function Field({
   children,
 }: {
   label: string
-  htmlFor: string
+  htmlFor?: string
   error?: string
   children: React.ReactNode
 }) {
@@ -72,64 +77,73 @@ function Field({
   )
 }
 
+// Construye la URL del Calendly con los datos del form pre-cargados en las
+// preguntas personalizadas (a1..a7). El orden debe coincidir con el orden de
+// las preguntas configuradas en Calendly. Nombre y email los pide Calendly.
+function buildCalendlyUrl(values: FormValues): string {
+  const params = new URLSearchParams({
+    a1: values.empresa,
+    a2: values.cargo,
+    a3: values.rubro,
+    a4: values.empleados,
+    a5: values.facturacion,
+    a6: values.area.join(', '),
+    a7: values.whatsapp,
+    hide_gdpr_banner: '1',
+  })
+  return `${site.calendly}?${params.toString()}`
+}
+
 export function QualificationForm() {
-  const [result, setResult] = useState<Result | null>(null)
+  const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
     defaultValues: {
+      rubro: '',
       empleados: '',
       facturacion: '',
-      presupuesto: '',
+      area: [],
     },
   })
 
-  const email = watch('email')
-  const showEmailWarning = email && PERSONAL_EMAIL.test(email)
-
   const onSubmit = async (values: FormValues) => {
-    const califica = !(
-      values.empleados === EMPLEADOS[0] &&
-      values.facturacion === FACTURACION[0] &&
-      values.presupuesto === PRESUPUESTO[0]
-    )
-
     setSubmitting(true)
     try {
       await fetch('/api/agendar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...values, califica }),
+        body: JSON.stringify(values),
       })
     } catch {
-      /* la notificación es best-effort; igual mostramos el resultado */
+      /* la notificación es best-effort; igual llevamos al calendario */
     } finally {
       setSubmitting(false)
-      setResult(califica ? 'qualified' : 'rejected')
+      setCalendlyUrl(buildCalendlyUrl(values))
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
-  if (result === 'qualified') {
+  if (calendlyUrl) {
     return (
       <div>
         <h2 className="font-display text-[clamp(28px,3.5vw,40px)] font-semibold leading-[1.1] tracking-[-0.01em] text-offwhite text-balance">
-          Listo. Elegí el horario que te quede mejor.
+          Estás a un paso de la conversación que puede cambiar cómo opera tu
+          empresa.
         </h2>
         <p className="mt-5 max-w-2xl font-sans text-[17px] leading-[1.6] text-muted md:text-[18px]">
-          Uno de nuestros fundadores te va a recibir personalmente en la llamada.
-          Cuarenta y cinco minutos. Sin venderte nada, solo para entender tu
-          operación y ver si tenemos algo construible juntos.
+          Te recibe uno de nuestros fundadores, en persona. Cuarenta y cinco
+          minutos para mirar tu operación y salir con ideas concretas, no con una
+          propuesta de venta. Elegí el horario que mejor te quede.
         </p>
         <div className="mt-10 overflow-hidden rounded-xl border border-border/60 bg-surface">
           <iframe
-            src={site.calendly}
+            src={calendlyUrl}
             title="Agendar diagnóstico con Morben"
             className="h-[700px] w-full"
             loading="lazy"
@@ -139,52 +153,8 @@ export function QualificationForm() {
     )
   }
 
-  if (result === 'rejected') {
-    return (
-      <div className="max-w-2xl">
-        <h2 className="font-display text-[clamp(28px,3.5vw,40px)] font-semibold leading-[1.1] tracking-[-0.01em] text-offwhite text-balance">
-          Gracias por completar el formulario.
-        </h2>
-        <div className="mt-6 space-y-5 font-sans text-[17px] leading-[1.65] text-muted md:text-[18px]">
-          <p>
-            En este momento, Morben trabaja con empresas en proyectos de
-            implementación de operaciones con IA. Por el tamaño de operación que
-            describiste, probablemente nuestro enfoque no es el más adecuado para
-            vos hoy.
-          </p>
-          <p>
-            Si querés contarnos más sobre tu caso, podés escribirnos directamente a{' '}
-            <a
-              href={`mailto:${site.email}`}
-              className="text-orange transition-colors hover:text-orange-light"
-            >
-              {site.email}
-            </a>
-            . Lo leemos personalmente y te respondemos en 48 horas hábiles.
-          </p>
-          <p>
-            También podés suscribirte al newsletter para mantenerte cerca y volver
-            cuando tenga sentido.
-          </p>
-        </div>
-        <div className="mt-8">
-          <NewsletterForm />
-        </div>
-        <div className="mt-8">
-          <ButtonLink href="/" variant="ghost">
-            Volver al sitio
-          </ButtonLink>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="max-w-2xl space-y-6">
-      <Field label="Nombre completo" htmlFor="nombre" error={errors.nombre?.message}>
-        <input id="nombre" type="text" autoComplete="name" className={inputClass} {...register('nombre')} />
-      </Field>
-
       <Field label="Cargo" htmlFor="cargo" error={errors.cargo?.message}>
         <input id="cargo" type="text" autoComplete="organization-title" className={inputClass} {...register('cargo')} />
       </Field>
@@ -193,27 +163,20 @@ export function QualificationForm() {
         <input id="empresa" type="text" autoComplete="organization" className={inputClass} {...register('empresa')} />
       </Field>
 
-      <Field label="Email corporativo" htmlFor="email" error={errors.email?.message}>
-        <input
-          id="email"
-          type="email"
-          autoComplete="email"
-          placeholder="tu@empresa.com.py"
-          className={inputClass}
-          {...register('email')}
-        />
-        {showEmailWarning && !errors.email && (
-          <p className="mt-1.5 font-sans text-[13px] text-orange-light">
-            Preferimos email corporativo. Si solo tenés Gmail, podés continuar.
-          </p>
-        )}
+      <Field label="¿En qué rubro está tu empresa?" htmlFor="rubro" error={errors.rubro?.message}>
+        <select id="rubro" className={inputClass} defaultValue="" {...register('rubro')}>
+          <option value="" disabled>
+            Elegí una opción
+          </option>
+          {RUBROS.map((opt) => (
+            <option key={opt} value={opt}>
+              {opt}
+            </option>
+          ))}
+        </select>
       </Field>
 
-      <Field
-        label="WhatsApp con código país"
-        htmlFor="whatsapp"
-        error={errors.whatsapp?.message}
-      >
+      <Field label="WhatsApp con código país" htmlFor="whatsapp" error={errors.whatsapp?.message}>
         <input
           id="whatsapp"
           type="tel"
@@ -259,30 +222,28 @@ export function QualificationForm() {
       </Field>
 
       <Field
-        label="¿Qué presupuesto estás dispuesto a invertir en automatización en los próximos 6 meses?"
-        htmlFor="presupuesto"
-        error={errors.presupuesto?.message}
+        label="¿En qué área de tu empresa necesitás automatizar?"
+        error={errors.area?.message}
       >
-        <select id="presupuesto" className={inputClass} defaultValue="" {...register('presupuesto')}>
-          <option value="" disabled>
-            Elegí una opción
-          </option>
-          {PRESUPUESTO.map((opt) => (
-            <option key={opt} value={opt}>
+        <p className="mb-3 -mt-1 font-sans text-[13px] text-hint">
+          Podés elegir más de una.
+        </p>
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+          {AREAS.map((opt) => (
+            <label
+              key={opt}
+              className="flex cursor-pointer items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 font-sans text-[15px] text-offwhite transition-colors hover:border-orange/50 has-[:checked]:border-orange has-[:checked]:bg-orange/5"
+            >
+              <input
+                type="checkbox"
+                value={opt}
+                className="h-4 w-4 shrink-0 accent-orange"
+                {...register('area')}
+              />
               {opt}
-            </option>
+            </label>
           ))}
-        </select>
-      </Field>
-
-      <Field label="¿Qué te trae a Morben? (opcional)" htmlFor="mensaje">
-        <textarea
-          id="mensaje"
-          rows={3}
-          className={inputClass}
-          placeholder="Contanos en dos o tres líneas qué querés resolver."
-          {...register('mensaje')}
-        />
+        </div>
       </Field>
 
       <button
