@@ -33,7 +33,7 @@ export function Hero() {
             animate="show"
             className="mt-6 font-display font-semibold text-[clamp(40px,8vw,96px)] leading-[1.04] tracking-[-0.03em] text-offwhite text-balance"
           >
-            Tu operación, funcionando sola. Sobre los sistemas que ya tenés.
+            Tu empresa puede hacer mucho más con los sistemas que ya tiene.
           </motion.h1>
 
           <motion.p
@@ -43,8 +43,9 @@ export function Hero() {
             animate="show"
             className="mt-8 max-w-2xl font-sans text-[18px] leading-[1.55] text-muted md:text-[20px]"
           >
-            Tu equipo deja de cargar datos a mano, perseguir información y aprobar
-            todo sobre la hora. Sin reemplazar nada de lo que ya funciona.
+            Creamos soluciones a medida para eliminar trabajo manual, conectar
+            información y acelerar procesos críticos sin reemplazar nada de lo
+            que hoy funciona.
           </motion.p>
 
           <motion.div
