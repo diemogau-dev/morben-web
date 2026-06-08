@@ -3,6 +3,8 @@ export const site = {
   domain: 'morben.com.py',
   url: 'https://morben.com.py',
   tagline: 'Operational AI Company · Paraguay',
+  // Título principal: vive acá para que hero, <title> y la OG image queden sincronizados.
+  heroTitle: 'Tu empresa puede hacer mucho más con los sistemas que ya tiene.',
   description:
     'Operational AI Company. Construimos operación nueva con IA sobre los sistemas que las empresas paraguayas ya tienen. En semanas, no en años.',
   email: 'hola@morben.com.py',

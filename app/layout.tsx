@@ -11,8 +11,7 @@ import { cn } from '@/lib/utils'
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default:
-      'Morben · Automatizamos operaciones sobre los sistemas que ya tenés',
+    default: `Morben · ${site.heroTitle}`,
     template: '%s · Morben',
   },
   description: site.description,

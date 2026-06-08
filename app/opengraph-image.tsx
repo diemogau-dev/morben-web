@@ -1,11 +1,12 @@
 import { renderOgImage, ogSize, ogContentType } from '@/lib/og'
+import { site } from '@/lib/site'
 
 export const size = ogSize
 export const contentType = ogContentType
-export const alt = 'Morben · Sistemas IA y automatizaciones'
+export const alt = `Morben · ${site.heroTitle}`
 
 export default function Image() {
   return renderOgImage({
-    title: 'Automatizamos tus operaciones sobre los sistemas que ya tenés.',
+    title: site.heroTitle,
   })
 }
