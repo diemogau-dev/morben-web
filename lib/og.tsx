@@ -5,7 +5,7 @@ export const ogContentType = 'image/png'
 
 const isotypeSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#FF5722" stroke-width="7"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="7" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="44" ry="20" fill="none" stroke="#FF5722" stroke-width="7" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="10" fill="#FF5722"/></svg>`
 
-const isotypeDataUri = `data:image/svg+xml;base64,${Buffer.from(isotypeSvg).toString('base64')}`
+export const isotypeDataUri = `data:image/svg+xml;base64,${Buffer.from(isotypeSvg).toString('base64')}`
 
 export function renderOgImage({ eyebrow, title }: { eyebrow?: string; title: string }) {
   return new ImageResponse(
