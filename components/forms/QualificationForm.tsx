@@ -94,7 +94,7 @@ function buildCalendlyUrl(values: FormValues): string {
   return `${site.calendly}?${params.toString()}`
 }
 
-export function QualificationForm() {
+export function QualificationForm({ onSubmitted }: { onSubmitted?: () => void } = {}) {
   const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
 
@@ -125,6 +125,7 @@ export function QualificationForm() {
     } finally {
       setSubmitting(false)
       setCalendlyUrl(buildCalendlyUrl(values))
+      onSubmitted?.()
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }

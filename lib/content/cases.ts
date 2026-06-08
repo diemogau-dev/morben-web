@@ -112,15 +112,15 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: 'salon-market',
-    client: 'Salon Market',
-    logo: '/logos/salon-market.png',
+    client: 'Importadora y retail de cosméticos',
+    logo: null,
     eyebrowTag: 'Caso · Retail',
-    headline: 'Cómo Salon Market convirtió clientes dormidos en ventas recurrentes otra vez.',
+    headline:
+      'Cómo una importadora y retail de cosméticos convirtió clientes dormidos en ventas recurrentes otra vez.',
     subtitle:
       'Un sistema que detecta cuándo un cliente está listo para volver a comprar, y actúa en ese momento exacto.',
     chips: [
-      'Salon Market',
-      'Retail · Importación de cosméticos',
+      'Importadora y retail de cosméticos',
       'Implementación: pocas semanas',
     ],
     sections: [
@@ -130,7 +130,7 @@ export const cases: CaseStudy[] = [
         body: [
           'Sin aviso. Sin reclamo. Simplemente dejaron de aparecer.',
           'El equipo seguía contactando a toda la base por WhatsApp, sin distinción, al mismo tiempo. Algunos respondían. La mayoría no. Y el costo de cada mensaje se pagaba igual.',
-          'Salon Market estaba pagando por contactar clientes que todavía no necesitaban comprar, mientras los que sí estaban listos para volver pasaban desapercibidos.',
+          'La empresa estaba pagando por contactar clientes que todavía no necesitaban comprar, mientras los que sí estaban listos para volver pasaban desapercibidos.',
         ],
       },
       {
@@ -157,7 +157,7 @@ export const cases: CaseStudy[] = [
       },
       {
         eyebrow: 'Implementación',
-        heading: 'Sobre los datos que Salon Market ya tenía.',
+        heading: 'Sobre los datos que la empresa ya tenía.',
         body: [
           'Sin nuevos sistemas. Sin cambiar la operación comercial. Sin aumentar el equipo. Usamos el historial de transacciones que ya existía dentro de la empresa, lo estructuramos, y lo conectamos al canal de contacto que ya estaba en uso.',
         ],
@@ -178,14 +178,14 @@ export const cases: CaseStudy[] = [
       body: 'Analizamos tu historial de compras y te mostramos cuánto revenue está dormido, qué clientes tienen mayor probabilidad de recompra, dónde se está perdiendo eficiencia comercial, y cuánto podrías recuperar automatizando el seguimiento.',
     },
     meta: {
-      title: 'Caso Salon Market, +15 a 20% en ventas recurrentes',
+      title: 'Caso retail · +15 a 20% en ventas recurrentes',
       description:
-        'Un sistema que detecta cuándo un cliente está listo para volver a comprar, y actúa en ese momento exacto. Para una importadora de cosméticos.',
+        'Un sistema que detecta cuándo un cliente está listo para volver a comprar, y actúa en ese momento exacto. Para una importadora y retail de cosméticos.',
     },
     preview: {
       category: 'Retail · Importación de cosméticos',
       headline:
-        'Cómo Salon Market convirtió clientes dormidos en ventas recurrentes otra vez.',
+        'Cómo una importadora y retail de cosméticos convirtió clientes dormidos en ventas recurrentes otra vez.',
       result: '+15 a 20% en ventas / 60 a 80% menos costo de WhatsApp.',
     },
   },

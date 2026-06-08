@@ -92,7 +92,7 @@ function FaqItem({
 }
 
 export function Faq() {
-  const [openIndex, setOpenIndex] = useState<number>(0)
+  const [openIndex, setOpenIndex] = useState<number>(-1)
 
   return (
     <section className="py-24 md:py-32 lg:py-40">
