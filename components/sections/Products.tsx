@@ -6,16 +6,16 @@ import { ButtonLink } from '@/components/ui/Button'
 const products = [
   {
     number: '01',
-    name: 'Asistente operativo',
-    subtitle: 'La información que tu equipo busca, en segundos.',
-    body: 'Tu equipo pierde horas todos los días buscando información que vive dispersa en planillas, correos viejos, archivos compartidos y la cabeza de alguien. Construimos un asistente interno que centraliza el conocimiento de tu empresa y lo entrega en segundos. La normativa, los productos, los datos del cliente, el histórico de cada operación. Todo accesible desde donde tu equipo ya trabaja: WhatsApp, Teams, navegador.',
-    para: 'Para: oficiales de crédito, asesores comerciales, atención al cliente, contadores, equipo legal interno, agentes de seguros.',
+    name: 'Atención y captura comercial',
+    subtitle: 'Cada cliente que escribe queda atendido, calificado y agendado. Sin pasar por una persona.',
+    body: 'Tu equipo se la pasa contestando lo mismo todo el día. ¿Cuánto cuesta? ¿Tienen turno? ¿Cuándo me atienden? ¿Está disponible? Y los leads que sí van a comprar se mezclan con los curiosos, los que ya preguntaron mil veces y los que no van a cerrar nunca. Construimos un agente que atiende veinticuatro horas por WhatsApp, web o el canal que tu cliente ya usa. Filtra, califica, responde con la información de tu empresa y agenda directo en la agenda del que tiene que vender. Cuando el caso necesita un humano, escala automáticamente.',
+    para: 'Para: filtrado y captación de leads, atención al cliente 24/7, agendamiento de turnos y visitas. Inmobiliarias, concesionarias, clínicas, servicios profesionales, ecommerce.',
   },
   {
     number: '02',
     name: 'Inteligencia comercial',
     subtitle: 'Dejá de tratar a todos tus clientes por igual.',
-    body: 'Estás contactando a toda tu base de la misma forma. A los que no van a comprar y a los que sí. A los que van a pagar y a los que no. El costo lo pagás siempre, el resultado no. Construimos sistemas que priorizan, segmentan y actúan: a quién contactar primero, qué decirle, por qué canal, en qué momento. Cobranza inteligente, recuperación de clientes dormidos, follow-up que no se cae.',
+    body: 'Estás contactando a toda tu base de la misma forma. A los que no van a comprar y a los que sí. A los que van a pagar y a los que no. El costo lo pagás siempre, el resultado no. Construimos sistemas que priorizan, segmentan y actúan sobre tu base: a quién contactar primero, qué decirle, por qué canal, en qué momento. Cobranza inteligente, recuperación de clientes dormidos, follow-up que no se cae, campañas que apuntan a quien sí va a responder.',
     para: 'Para: cooperativas, financieras, retail con cuenta corriente, importadoras, aseguradoras, ecommerce.',
   },
   {
@@ -33,8 +33,8 @@ export function Products() {
       <Container>
         <SectionHeading
           eyebrow="Productos"
-          title="Tres operaciones nuevas. Tres formas de empezar."
-          subtitle="Cada implementación es a medida, pero la mayoría de los casos cae en uno de estos tres productos. Diagnosticamos primero, construimos después."
+          title="Tres frentes donde tu operación pierde plata todos los días."
+          subtitle="Cada implementación es a medida, pero la mayoría de los casos cae en uno de estos tres frentes. Diagnosticamos primero, construimos después."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-12 md:mt-20 md:grid-cols-3 md:gap-10 lg:gap-16">
