@@ -10,11 +10,12 @@ const benefits = [
 ]
 
 // Posiciones de cada "solución" sobre la curva (porcentaje dentro del cuadro 4:3).
+// Calculadas sobre la cubic-bezier M 50 250 C 150 250, 240 200, 380 30 en t = 0.2 / 0.45 / 0.7 / 0.9.
 const nodes = [
-  { rank: '1ra', x: 17.5, y: 75 },
-  { rank: '2da', x: 40, y: 58.3 },
-  { rank: '3ra', x: 62.5, y: 40 },
-  { rank: '4ta', x: 82.5, y: 23.3 },
+  { rank: '1ra', x: 27.25, y: 81 },
+  { rank: '2da', x: 46, y: 71 },
+  { rank: '3ra', x: 66.5, y: 50.7 },
+  { rank: '4ta', x: 84.75, y: 25.7 },
 ]
 
 function CompoundingChart() {
@@ -33,17 +34,23 @@ function CompoundingChart() {
         {[100, 200, 300].map((x) => (
           <line key={`v${x}`} x1={x} y1="0" x2={x} y2="300" stroke="#0E0E10" strokeOpacity="0.06" />
         ))}
-        {/* Curva ascendente */}
-        <polyline
-          points="70,225 160,175 250,120 330,70 375,40"
+        {/* Curva de crecimiento — arranca casi plana y se dispara arriba, como exponencial */}
+        <path
+          d="M 50 250 C 150 250, 240 200, 380 30"
+          fill="none"
+          stroke="#0E0E10"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        {/* Punta de flecha, alineada con la tangente final de la curva */}
+        <path
+          d="M 364 38 L 380 30 L 375 47"
           fill="none"
           stroke="#0E0E10"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        {/* Punta de flecha */}
-        <path d="M375,40 l-13,2 m13,-2 l-4,12" fill="none" stroke="#0E0E10" strokeWidth="2" strokeLinecap="round" />
       </svg>
 
       {/* Nodos */}
@@ -59,11 +66,6 @@ function CompoundingChart() {
           <span className="font-sans text-[11px] font-medium text-carbon/55">Solución</span>
         </div>
       ))}
-
-      {/* Ejes */}
-      <span className="absolute bottom-3 right-4 font-mono text-[10px] uppercase tracking-[0.14em] text-carbon/40">
-        Cada nueva solución →
-      </span>
     </div>
   )
 }
@@ -79,24 +81,19 @@ export function Compounding() {
               <Eyebrow>La ventaja que se acumula</Eyebrow>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="mt-5 font-display text-[clamp(34px,4.5vw,56px)] font-semibold leading-[1.06] tracking-[-0.02em] text-carbon text-balance">
-                El valor se multiplica con{' '}
-                <span className="relative whitespace-nowrap">
-                  cada nuevo caso de uso
-                  <span
-                    aria-hidden="true"
-                    className="absolute -bottom-1 left-0 h-[4px] w-full rounded-full bg-gradient-to-r from-orange to-orange-deep"
-                  />
+              <h2 className="mt-5 font-display text-[clamp(32px,4vw,48px)] font-semibold leading-[1.08] tracking-[-0.02em] text-carbon text-balance">
+                Cada caso de uso{' '}
+                <span className="box-decoration-clone bg-gradient-to-r from-orange to-orange-deep bg-[length:100%_4px] bg-bottom bg-no-repeat pb-[6px]">
+                  suma al siguiente
                 </span>
                 .
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-7 max-w-xl font-sans text-[17px] leading-[1.6] text-[#3A3A3A] md:text-[18px]">
-                La mayoría de las herramientas de IA rinden cada vez menos. Las
-                nuestras rinden cada vez más. La primera solución toma semanas; la
-                quinta, una fracción, porque cada una deja datos, conexiones y
-                agentes que la siguiente reutiliza.
+                La primera solución toma semanas. La quinta, una fracción del
+                tiempo. Cada una deja datos, conexiones y agentes que la siguiente
+                reutiliza.
               </p>
             </Reveal>
 
@@ -114,14 +111,6 @@ export function Compounding() {
                 </Reveal>
               ))}
             </ul>
-
-            <Reveal delay={0.3}>
-              <p className="mt-10 border-l-[3px] border-orange pl-5 font-display text-[18px] font-medium leading-[1.4] tracking-[-0.01em] text-carbon md:text-[20px]">
-                Por eso no te entregamos un proyecto y desaparecemos. Nos quedamos
-                operando con vos: cada mes tu empresa corre con más procesos en
-                piloto automático y con menos esfuerzo.
-              </p>
-            </Reveal>
           </div>
 
           {/* Gráfico */}
