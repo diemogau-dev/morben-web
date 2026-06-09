@@ -53,14 +53,14 @@ function FaqItem({
   onToggle: () => void
 }) {
   return (
-    <div className="border-b border-border">
+    <div className="border-b border-carbon/12">
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={open}
         className="flex w-full items-center justify-between gap-6 py-6 text-left"
       >
-        <span className="font-display text-[18px] font-medium tracking-[-0.01em] text-offwhite md:text-[20px]">
+        <span className="font-display text-[18px] font-medium tracking-[-0.01em] text-carbon md:text-[20px]">
           {q}
         </span>
         <span
@@ -81,7 +81,7 @@ function FaqItem({
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="max-w-2xl pb-6 font-sans text-[16px] leading-[1.65] text-muted md:text-[17px]">
+            <p className="max-w-2xl pb-6 font-sans text-[16px] leading-[1.65] text-[#3A3A3A] md:text-[17px]">
               {a}
             </p>
           </motion.div>
@@ -95,7 +95,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number>(-1)
 
   return (
-    <section className="py-24 md:py-32 lg:py-40">
+    <section className="bg-offwhite py-24 text-carbon md:py-32 lg:py-40">
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
@@ -103,7 +103,7 @@ export function Faq() {
               <Eyebrow>Preguntas</Eyebrow>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="mt-5 font-display text-[clamp(32px,4vw,48px)] font-semibold leading-[1.08] tracking-[-0.02em] text-offwhite text-balance">
+              <h2 className="mt-5 font-display text-[clamp(32px,4vw,48px)] font-semibold leading-[1.08] tracking-[-0.02em] text-carbon text-balance">
                 Lo que la mayoría se pregunta antes de empezar.
               </h2>
             </Reveal>

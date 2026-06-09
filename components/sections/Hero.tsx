@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[700px] items-center pt-32 pb-24 md:min-h-[88vh]">
       <Container>
-        <div className="max-w-4xl">
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <motion.div variants={item} custom={0} initial="hidden" animate="show">
             <Eyebrow>Sistemas con IA para empresas paraguayas</Eyebrow>
           </motion.div>
@@ -53,13 +53,23 @@ export function Hero() {
             custom={0.6}
             initial="hidden"
             animate="show"
-            className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
+            className="mt-10 flex flex-col items-center gap-x-6 gap-y-4 sm:flex-row sm:justify-center"
           >
-            <ButtonLink href={site.agendar} variant="primary" size="lg">
+            <ButtonLink
+              href={site.agendar}
+              variant="primary"
+              size="lg"
+              className="shadow-lg shadow-orange/25"
+            >
               {cta.primary}
               <span aria-hidden="true">→</span>
             </ButtonLink>
-            <ButtonLink href="#como-trabajamos" variant="ghost" size="lg">
+            <ButtonLink
+              href="#como-trabajamos"
+              variant="ghost"
+              size="lg"
+              className="text-muted hover:text-offwhite"
+            >
               Cómo trabajamos
             </ButtonLink>
           </motion.div>

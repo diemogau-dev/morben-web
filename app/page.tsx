@@ -1,7 +1,7 @@
 import { Hero } from '@/components/sections/Hero'
 import { LogoMarquee } from '@/components/sections/LogoMarquee'
 import { WhatWeAre } from '@/components/sections/WhatWeAre'
-import { Products } from '@/components/sections/Products'
+import { Compounding } from '@/components/sections/Compounding'
 import { ManifestoExcerpt } from '@/components/sections/ManifestoExcerpt'
 import { CasesPreview } from '@/components/sections/CasesPreview'
 import { HowWeWork } from '@/components/sections/HowWeWork'
@@ -15,7 +15,7 @@ export default function HomePage() {
       <Hero />
       <LogoMarquee />
       <WhatWeAre />
-      <Products />
+      <Compounding />
       <ManifestoExcerpt />
       <CasesPreview />
       <HowWeWork />

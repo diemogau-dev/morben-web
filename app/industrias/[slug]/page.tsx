@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { Check } from 'lucide-react'
 import { Container } from '@/components/layout/Container'
 import { PageHero } from '@/components/sections/PageHero'
 import { CtaBlock } from '@/components/sections/CtaBlock'
-import { CaseSection } from '@/components/cases/CaseSection'
 import { CaseCard } from '@/components/cases/CaseCard'
 import { Reveal } from '@/components/motion/Reveal'
 import { Eyebrow } from '@/components/ui/Eyebrow'
+import { displayM } from '@/components/ui/SectionHeading'
 import { industries, getIndustry } from '@/lib/content/industries'
 import { getCase } from '@/lib/content/cases'
 
@@ -39,24 +40,94 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
         subtitle={industry.subtitle}
       />
 
-      <section className="py-16 md:py-24">
+      {/* Narrativa: problema → lo que aprendimos → cómo lo resolvemos */}
+      <section className="pt-16 md:pt-24">
         <Container>
-          <div className="mx-auto max-w-[800px]">
-            <CaseSection
-              section={{
-                eyebrow: 'Cómo se ve hoy',
-                heading: industry.statusQuo.heading,
-                body: [industry.statusQuo.body],
-              }}
-            />
-            <CaseSection
-              section={{
-                eyebrow: 'Qué automatizamos',
-                heading: industry.whatWeAutomate.heading,
-                body: [industry.whatWeAutomate.body],
-                bullets: industry.whatWeAutomate.bullets,
-              }}
-            />
+          <div className="mx-auto max-w-[820px] space-y-16 md:space-y-20">
+            {/* El problema */}
+            <Reveal>
+              <div>
+                <Eyebrow>El problema</Eyebrow>
+                <h2 className={`mt-5 ${displayM}`}>{industry.problem.heading}</h2>
+                <p className="mt-6 font-sans text-[17px] leading-[1.7] text-muted md:text-[18px]">
+                  {industry.problem.body}
+                </p>
+              </div>
+            </Reveal>
+
+            {/* Lo que aprendimos — bloque destacado */}
+            <Reveal>
+              <div className="rounded-2xl border border-border border-l-2 border-l-orange bg-surface/40 p-8 md:p-10">
+                <Eyebrow>Lo que aprendimos</Eyebrow>
+                <h2 className="mt-4 font-display text-[22px] font-semibold leading-[1.2] tracking-[-0.01em] text-offwhite md:text-[26px]">
+                  {industry.learned.heading}
+                </h2>
+                <p className="mt-5 font-sans text-[17px] leading-[1.7] text-muted md:text-[18px]">
+                  {industry.learned.body}
+                </p>
+              </div>
+            </Reveal>
+
+            {/* Cómo lo resolvemos */}
+            <Reveal>
+              <div>
+                <Eyebrow>Cómo lo resolvemos</Eyebrow>
+                <h2 className={`mt-5 ${displayM}`}>{industry.solution.heading}</h2>
+                <p className="mt-6 font-sans text-[17px] leading-[1.7] text-muted md:text-[18px]">
+                  {industry.solution.body}
+                </p>
+                <ul className="mt-8 space-y-3">
+                  {industry.solution.bullets.map((bullet, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-4 font-sans text-[17px] leading-[1.6] text-offwhite/90 md:text-[18px]"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-orange"
+                      />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* Qué podés esperar — cierre en claro */}
+      <section className="mt-20 bg-offwhite py-20 text-carbon md:mt-28 md:py-28">
+        <Container>
+          <div className="mx-auto max-w-[820px]">
+            <Reveal>
+              <Eyebrow>Resultados</Eyebrow>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <h2 className="mt-5 font-display text-[clamp(28px,3.5vw,40px)] font-semibold leading-[1.1] tracking-[-0.01em] text-carbon text-balance">
+                {industry.results.heading}
+              </h2>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <p className="mt-6 max-w-2xl font-sans text-[17px] leading-[1.65] text-[#3A3A3A] md:text-[18px]">
+                {industry.results.body}
+              </p>
+            </Reveal>
+
+            <ul className="mt-10 divide-y divide-carbon/10 border-y border-carbon/10">
+              {industry.results.outcomes.map((outcome, i) => (
+                <Reveal key={i} delay={0.1 + i * 0.06}>
+                  <li className="flex items-start gap-4 py-5">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange/12 text-orange">
+                      <Check className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                    <span className="font-sans text-[17px] font-medium leading-[1.5] text-carbon md:text-[18px]">
+                      {outcome}
+                    </span>
+                  </li>
+                </Reveal>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>
