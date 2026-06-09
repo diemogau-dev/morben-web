@@ -43,6 +43,14 @@ cada conversación estratégica que tengamos.
 
 - **Copy en español rioplatense/paraguayo (voseo)**: "tenés", "agendá", "sentate".
   Tono directo, anti-humo, sin promesas vacías. Ver `morben-package/` para la voz.
+- **NUNCA usar guiones largos en el copy del sitio.** Se nota redactado con IA.
+  Esto incluye el em-dash (U+2014) y el en-dash (U+2013). Solo se permiten guion
+  corto normal en compuestos (`-`), punto, coma y punto y coma. Para un inciso o
+  pausa, NO usar guion largo: reescribir con comas o partir la oración. Aplica a
+  todo lo que se renderiza (componentes, contenido en `lib/content/`, metadatos)
+  y también a los comentarios del código, para no normalizar el hábito.
+  Verificación (debe dar cero):
+  `grep -RnaE $'(\\xe2\\x80\\x94|\\xe2\\x80\\x93)' app components lib`.
 - CTA principal: **"Agendar diagnóstico"** → ruta interna `/agendar`.
 - Datos de contacto y redes SIEMPRE desde `lib/site.ts`, nunca hardcodeados.
 - Antes de dar por terminada una tarea: `npm run build` debe pasar.

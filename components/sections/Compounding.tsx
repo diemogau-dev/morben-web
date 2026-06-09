@@ -34,7 +34,7 @@ function CompoundingChart() {
         {[100, 200, 300].map((x) => (
           <line key={`v${x}`} x1={x} y1="0" x2={x} y2="300" stroke="#0E0E10" strokeOpacity="0.06" />
         ))}
-        {/* Curva de crecimiento — arranca casi plana y se dispara arriba, como exponencial */}
+        {/* Curva de crecimiento: arranca casi plana y se dispara arriba, como exponencial */}
         <path
           d="M 50 250 C 150 250, 240 200, 380 30"
           fill="none"

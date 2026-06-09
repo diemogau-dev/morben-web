@@ -169,7 +169,7 @@ export const industries: Industry[] = [
       'Donde la operación está repartida geográficamente, la información viaja por WhatsApp y Excel, y las decisiones de plata se toman con datos que ya cambiaron.',
     problem: {
       heading: 'El gerente se entera de los problemas dos días tarde.',
-      body: 'Lo que pasa en el campo —cosecha, hacienda, insumos, maquinaria, personal— llega al escritorio con días de atraso, a fuerza de partes en papel, audios de WhatsApp y planillas que carga alguien a la noche. Cuando el dato llega a gerencia para decidir compra de insumos, logística o venta, ya es viejo. Y reconstruir la foto consolidada de varias unidades es un trabajo manual que nadie quiere hacer.',
+      body: 'Lo que pasa en el campo, la cosecha, la hacienda, los insumos, la maquinaria, el personal, llega al escritorio con días de atraso, a fuerza de partes en papel, audios de WhatsApp y planillas que carga alguien a la noche. Cuando el dato llega a gerencia para decidir compra de insumos, logística o venta, ya es viejo. Y reconstruir la foto consolidada de varias unidades es un trabajo manual que nadie quiere hacer.',
     },
     learned: {
       heading: 'El dato ya se captura; lo que falta es que llegue a tiempo y junto.',
@@ -205,7 +205,7 @@ export const industries: Industry[] = [
       'Donde la velocidad de respuesta define la venta: el primer agente que contesta con la información correcta se queda la operación, y el resto compite por las sobras.',
     problem: {
       heading: 'El lead se enfría mientras alguien busca la información del inmueble.',
-      body: 'Entra una consulta por web, WhatsApp o Instagram. Alguien la ve horas después. Cuando responde, el cliente ya está hablando con dos competidores y la mitad de la data del inmueble —precio actualizado, disponibilidad, fotos, condiciones— está repartida en tres carpetas y en la cabeza del agente que hoy está de franco. Los leads tibios, los que no compran hoy pero sí en tres meses, directamente se pierden: nadie tiene tiempo de seguirlos.',
+      body: 'Entra una consulta por web, WhatsApp o Instagram. Alguien la ve horas después. Cuando responde, el cliente ya está hablando con dos competidores. Y la información del inmueble que necesita para cerrar, precio actualizado, disponibilidad, fotos, condiciones, está repartida en tres carpetas y en la cabeza del agente que hoy está de franco. Los leads tibios, los que no compran hoy pero sí en tres meses, directamente se pierden, nadie tiene tiempo de seguirlos.',
     },
     learned: {
       heading: 'Casi nadie pierde por precio; se pierde por demora y por falta de seguimiento.',
@@ -241,11 +241,11 @@ export const industries: Industry[] = [
       'Donde la atención al cliente se satura contestando siempre lo mismo y la cuenta corriente se gestiona a mano, cliente por cliente.',
     problem: {
       heading: 'El equipo de atención contesta todo el día lo que ya está en el sistema.',
-      body: 'Estado del pedido, stock, precio actualizado, saldo de cuenta. Las mismas preguntas cientos de veces por día, todas con respuesta en el sistema, solo que nadie las tiene a mano en el momento. Mientras tanto, la cobranza de cuenta corriente se hace parejo y a pulmón, y los clientes que dejaron de comprar —que antes pedían todas las semanas— se van apagando sin que nadie lo note hasta que ya es tarde.',
+      body: 'Estado del pedido, stock, precio actualizado, saldo de cuenta. Las mismas preguntas cientos de veces por día, todas con respuesta en el sistema, solo que nadie las tiene a mano en el momento. Mientras tanto, la cobranza de cuenta corriente se hace parejo y a pulmón, y los clientes que dejaron de comprar, los que antes pedían todas las semanas, se van apagando sin que nadie lo note hasta que ya es tarde.',
     },
     learned: {
       heading: 'El cliente que se enfría no avisa; deja de comprar de a poco.',
-      body: 'Vimos que en retail con cuenta corriente se pierde plata por dos lados silenciosos: la atención que no llega a tiempo y el cliente que baja el ritmo sin que salte ninguna alarma. Ninguno de los dos aparece en un reporte hasta que el daño ya está hecho. Los datos para anticiparlo ya están en el sistema; lo que falta es que alguien —o algo— los mire todos los días.',
+      body: 'Vimos que en retail con cuenta corriente se pierde plata por dos lados silenciosos: la atención que no llega a tiempo y el cliente que baja el ritmo sin que salte ninguna alarma. Ninguno de los dos aparece en un reporte hasta que el daño ya está hecho. Los datos para anticiparlo ya están en el sistema; lo que falta es que alguien, o algo, los mire todos los días.',
     },
     solution: {
       heading: 'Atender lo repetitivo y vigilar lo que se enfría.',

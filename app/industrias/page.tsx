@@ -23,7 +23,6 @@ export default function IndustriesPage() {
         subtitle="Cambia la industria, pero el dolor operativo casi siempre cae en uno de estos tres frentes. Primero te mostramos cuáles son; después, cómo se ven en tu rubro."
       />
 
-      {/* Las tres verticales — fondo claro para romper el negro */}
       <section className="mt-24 bg-offwhite py-24 text-carbon md:mt-32 md:py-32">
         <Container>
           <Reveal>

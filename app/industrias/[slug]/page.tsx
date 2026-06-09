@@ -40,11 +40,9 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
         subtitle={industry.subtitle}
       />
 
-      {/* Narrativa: problema → lo que aprendimos → cómo lo resolvemos */}
       <section className="pt-16 md:pt-24">
         <Container>
           <div className="mx-auto max-w-[820px] space-y-16 md:space-y-20">
-            {/* El problema */}
             <Reveal>
               <div>
                 <Eyebrow>El problema</Eyebrow>
@@ -55,7 +53,6 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
               </div>
             </Reveal>
 
-            {/* Lo que aprendimos — bloque destacado */}
             <Reveal>
               <div className="rounded-2xl border border-border border-l-2 border-l-orange bg-surface/40 p-8 md:p-10">
                 <Eyebrow>Lo que aprendimos</Eyebrow>
@@ -68,7 +65,6 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
               </div>
             </Reveal>
 
-            {/* Cómo lo resolvemos */}
             <Reveal>
               <div>
                 <Eyebrow>Cómo lo resolvemos</Eyebrow>
@@ -96,7 +92,6 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
         </Container>
       </section>
 
-      {/* Qué podés esperar — cierre en claro */}
       <section className="mt-20 bg-offwhite py-20 text-carbon md:mt-28 md:py-28">
         <Container>
           <div className="mx-auto max-w-[820px]">
